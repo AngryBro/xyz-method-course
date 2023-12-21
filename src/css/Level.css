@@ -1,0 +1,33 @@
+.level-button {
+    padding: 15px;
+    font-size: 30pt;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+.level-button-locked {
+    width: fit-content;
+    height: fit-content;
+}
+.level-button-text-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.level-button-bird {
+    transform: scale(2.5,1) rotateZ(90deg);
+    margin-left: 40px;
+    transition: all 0.3s ease;
+}
+.level-button-bird::after {
+    content: ">";
+}
+.level-button-bird.__opened {
+    transform: scale(2.5, 1) rotateZ(270deg);
+}
