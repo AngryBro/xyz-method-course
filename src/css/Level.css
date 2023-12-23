@@ -9,7 +9,10 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 50px;
+    transition: all 0.3s ease;
+}
+.level-button:hover {
+    background-color: rgb(229, 229, 229);
 }
 .level-button-locked {
     width: fit-content;
@@ -30,4 +33,28 @@
 }
 .level-button-bird.__opened {
     transform: scale(2.5, 1) rotateZ(270deg);
+}
+.level-sub-levels-container {
+    margin-left: 50px;
+}
+.level-sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(219, 219, 219);
+    color: black;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 20pt;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-right: 15px;
+}
+.level-sub-container:hover {
+    background-color: rgb(200, 200, 200);
+}
+.level-sub-locked {
+    transform: translateY(12px);
 }

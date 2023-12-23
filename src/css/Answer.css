@@ -1,0 +1,29 @@
+.answer-container {
+    display: flex;
+    font-size: 20pt;
+    width: fit-content;
+    padding: 10px;
+    align-items: center;
+}
+.answer-text {
+    font-weight: bold;
+}
+.answer-input {
+    margin-left: 10px;
+    margin-right: 30px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+.answer-input input {
+    outline: none;
+}
+.answer-correct {
+    font-weight: bold;
+    font-style: italic;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+.answer-correct.__hidden {
+    opacity: 0;
+}

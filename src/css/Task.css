@@ -1,0 +1,11 @@
+.task-locked {
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.task-locked.__locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.task-answer {
+    margin-top: 20px;
+}

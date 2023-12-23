@@ -1,7 +1,7 @@
 import { DATA } from "./DATA"
-import { Level } from "./Level"
+import { Level, SubLevel } from "./Level"
 import { Title } from "./Title"
-import { useLocation } from "./static-router"
+import { useLocation, useNavigate } from "./static-router"
 import "./css/Theme.css"
 
 export const Theme = () => {
@@ -17,15 +17,23 @@ export const Theme = () => {
         }
         return keys
     }
+
+    const nav = useNavigate()
     
     return <div>
         <Title>Тема {id}. {DATA[id].name}</Title>
         <div className="theme-levels-container">
             {
                 subKeys(DATA[id]).map(key => 
-                    <Level locked={DATA[id][key].locked} key={key} name={`${key}. ${DATA[id][key].name}`}>
-                        {[]}
-                    </Level>    
+                    <div key={key} className="theme-level-container">
+                        <Level locked={DATA[id][key].locked} name={`${key}. ${DATA[id][key].name}`}>
+                            {
+                                subKeys(DATA[id][key]).map(subkey =>
+                                    <SubLevel onClick={() => nav(`/lesson/${id}.${key}.${subkey}`)} locked={subkey>2} done={subkey < 3} key={subkey}>{key}.{subkey}. {DATA[id][key][subkey].name}</SubLevel>    
+                                )
+                            }
+                        </Level>
+                    </div>    
                 )
             }
         </div>

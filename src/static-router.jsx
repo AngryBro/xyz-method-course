@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useChangeLocation = (callback) => {
     useEffect(() => {
+        console.log("callback()")
         // callback();
         window.addEventListener("hashchange", callback);
         
@@ -64,17 +65,35 @@ export const Routes = ({children}) => {
             if(p === "") {
                 p = "/";
             }
+            const equal = (sample, route) => {
+                if(sample.length !== route.length) {
+                    return false
+                }
+                for(let i = 0; i < sample.length; i++) {
+                    if(sample[i] !== "*" && sample[i] !== route[i]) {
+                        return false
+                    }
+                }
+                return true
+            }
+            let old_p = p
+            let split_p = p.split("/")
+            for(let key in elements) {
+                if(equal(key.split("/"), split_p)) {
+                    p = key
+                }
+            }
             if(p in elements) {
                 actEl = elements[p];
             }
             else {
                 let defaultElement = childrenArray.find(el => el.props.path === "/*");
                 if(defaultElement === undefined) {
-                    defaultElement = <div></div>;
+                    defaultElement = <div>Default</div>;
                 }
                 actEl = defaultElement;
             }
-            setActiveElement(actEl);
+            setActiveElement(<div key={old_p}>{actEl}</div>);
         }
 
         window.addEventListener("hashchange", handle);

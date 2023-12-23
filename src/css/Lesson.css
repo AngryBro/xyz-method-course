@@ -1,0 +1,35 @@
+.lesson-title {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: black;
+    color: white;
+    font-size: 30pt;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.lesson-tasks {
+    font-size: 25pt;
+}
+.lesson-task-container {
+    display: flex;
+    margin-bottom: 40px;
+}
+.lesson-task-number {
+    margin-right: 10px;
+}
+.lesson-next-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.lesson-next {
+    padding: 20px;
+    color: white;
+    background-color: black;
+    font-size: 20pt;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}

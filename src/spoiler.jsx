@@ -67,7 +67,7 @@ export const Spoiler = ({children, duration = 0.3, recursive = false, containsMa
         children: {
             overflow: "hidden",
             transition: `all ${duration}s ease`,
-            width: "fit-content",
+            width: "100%",
             height: childrenContainerHeight,
             maxWidth: "100%"
         },
