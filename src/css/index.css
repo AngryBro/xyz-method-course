@@ -21,3 +21,12 @@
 .container-footer {
     height: 200px;
 }
+.i {
+    font-style: italic;
+}
+.u {
+    text-decoration: underline;
+}
+.b {
+    font-weight: bold;
+}

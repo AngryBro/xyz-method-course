@@ -32,4 +32,11 @@
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.lesson-next:hover {
+    font-size: 25pt;
+}
+.lesson-conspect {
+    font-size: 20pt;
 }

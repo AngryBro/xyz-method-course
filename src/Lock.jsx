@@ -1,7 +1,7 @@
-export const Lock = ({size}) => 
+export const Lock = ({size, color = "black"}) => 
 
 <div style={{width: `${size}px`, height: `${size}px`, transform: `translateY(${17*size/20 - 34}px)`}}>
-<svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width={`${size}px`} height={`${size}px`} viewBox="0 0 530.91 530.91">
+<svg fill={color} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width={`${size}px`} height={`${size}px`} viewBox="0 0 530.91 530.91">
 <g>
 	<g>
 		<path d="M73.762,530.91h383.381c19.076,0,34.541-15.465,34.541-34.541V216.611c0-19.076-15.465-34.542-34.541-34.542h-6.634

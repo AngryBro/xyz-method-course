@@ -3,10 +3,11 @@ import { Level, SubLevel } from "./Level"
 import { Title } from "./Title"
 import { useLocation, useNavigate } from "./static-router"
 import "./css/Theme.css"
+import { Router } from "./Router"
 
-export const Theme = () => {
+export const Theme = ({localData, tasksDone}) => {
 
-    const id = Number(useLocation().split("/")[1])
+    const theme = Number(useLocation().split("/")[1])
 
     const subKeys = (obj) => {
         let keys = []
@@ -18,18 +19,22 @@ export const Theme = () => {
         return keys
     }
 
+
     const nav = useNavigate()
     
     return <div>
-        <Title>Тема {id}. {DATA[id].name}</Title>
+        <Title>Тема {theme}. {DATA[theme].name}</Title>
+        <div className="theme-router-container">
+            <Router path={{theme}} />
+        </div>
         <div className="theme-levels-container">
             {
-                subKeys(DATA[id]).map(key => 
-                    <div key={key} className="theme-level-container">
-                        <Level locked={DATA[id][key].locked} name={`${key}. ${DATA[id][key].name}`}>
+                subKeys(DATA[theme]).map(subTheme => 
+                    <div key={subTheme} className="theme-level-container">
+                        <Level progress={tasksDone(theme, subTheme).progress} locked={localData.greater(theme, subTheme, 1, 0) === -1} name={`${subTheme}. ${DATA[theme][subTheme].name}`}>
                             {
-                                subKeys(DATA[id][key]).map(subkey =>
-                                    <SubLevel onClick={() => nav(`/lesson/${id}.${key}.${subkey}`)} locked={subkey>2} done={subkey < 3} key={subkey}>{key}.{subkey}. {DATA[id][key][subkey].name}</SubLevel>    
+                                subKeys(DATA[theme][subTheme]).map(lesson =>
+                                    <SubLevel onClick={() => nav(`/lesson/${theme}.${subTheme}.${lesson}`)} locked={localData.greater(theme, subTheme, lesson, 0) === -1} done={localData.nextLesson(theme, subTheme, lesson) !== undefined ? localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson)) : false} key={lesson}>{subTheme}.{lesson}. {DATA[theme][subTheme][lesson].name}</SubLevel>    
                                 )
                             }
                         </Level>

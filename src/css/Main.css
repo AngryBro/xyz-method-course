@@ -1,0 +1,38 @@
+.main {
+    font-size: 20pt;
+}
+.main p {
+    margin-bottom: 20px;
+}
+.main-themes-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.main-begin {
+    background-color: black;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    color:white;
+    font-weight: bold;
+    width: fit-content;
+    font-size: 30pt;
+    transition: all 0.3s ease;
+    margin: auto;
+    position: relative;
+}
+.main-begin:hover {
+    font-size: 35pt;
+}
+.main-begin.__finished:hover {
+    color: black;
+}
+.main-begin.__finished:hover::after {
+    position: absolute;
+    left:50%;
+    top:50%;
+    color: white;
+    content: "Сбросить";
+    transform: translateX(-50%) translateY(-50%);
+}

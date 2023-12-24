@@ -4,12 +4,14 @@ import { useLocation, useNavigate } from "./static-router"
 import "./css/Lesson.css"
 import { useEffect, useRef, useState } from "react"
 import { Task } from "./Task"
+import { Router } from "./Router"
 
 export const Lesson = ({localData}) => {
 
+    const nav = useNavigate()
     const id = useLocation().split("/")[2]
-    const url = useLocation()
     const ids = id.split(".")
+    const [theme, subTheme, lesson] = id.split(".")
     const data = DATA[ids[0]][ids[1]][ids[2]]
     const container = useRef()
     //eslint-disable-next-line
@@ -20,50 +22,47 @@ export const Lesson = ({localData}) => {
         }
     }, [container])
 
-    const taskId = i => `${ids.join(".")}.${i + 1}`
 
     const check = (e, task) => {
         if(e.target.value === task.props.answer) {
-            localData.set(localData.get + 1)
+            let finished = localData.next()
+            if(finished) {
+                setTimeout(() => nav("/"), 3000)
+            }
         }
     }
 
-    const lastChar = s => s[s.length - 1]
+    const displayAnswer = (i) => {
+        return (localData.nextLesson(theme, subTheme, lesson) !== undefined && localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson))) ||
+            (i + 1 < data.tasks.length && unlockedTask(i + 1)) || localData.finished
+    }
 
-    const nav = useNavigate()
+    const unlockedTask = (i) => localData.unlockedTask(theme, subTheme, lesson, i)
 
-    const nextHidden = localData.get >= DATA.ids.length - 1 || Number(lastChar(DATA.ids[localData.get ].split("."))) !== 1
+    const nextHidden = localData.nextLesson(theme, subTheme, lesson)=== undefined || !localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson))
     
-    const nextLesson = () => {
-        let current = lastChar(url.split("/")) + ".1"
-        console.log(current)
-        let flag = false
-        for(let i = 0; i < DATA.ids.length; i++) {
-            if(flag && lastChar(DATA.ids[i].split(".")) === "1") {
-                return `/lesson/${DATA.ids[i].split(".").slice(0, -1).join(".")}`
-            }
-            if(current === DATA.ids[i]) {
-                flag = true
-            }
-        }
-        return ""
-    }
-    console.log(Number(lastChar(DATA.ids[localData.get + 1].split("."))))
+    const oneTask = DATA[theme][subTheme][lesson].tasks.length === 1
 
     return <div ref={container}>
-        <Title>{ids.slice(1).join(".")}. {data.name}</Title>
+        <Title>{[subTheme, lesson].join(".")}. {data.name}</Title>
+        <div className="lesson-router-container">
+            <Router path={{theme, subTheme, lesson}} />
+        </div>
         <div className="lesson-title">Лекция</div>
         {/* <iframe width={playerWidth} height={playerWidth * 720/1280} src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=9vui1wxSbfrgvUWm" title="YouTube video player" allowFullScreen>
             
         </iframe> */}
         <div className="lesson-title">Конспект</div>
-        <div className="lesson-title">Задачи</div>
+        <div className="lesson-conspect">
+            {data.conspect}
+        </div>
+        <div className="lesson-title">Задач{oneTask?"а":"и"}</div>
         <div className="lesson-tasks">
             {
                 data.tasks.map((task, i) =>
                     <div key={i} className="lesson-task-container">
-                        <div className="lesson-task-number">{i+1}.</div>
-                        <Task locked={DATA.ids.indexOf(taskId(i)) > localData.get} correct={DATA.ids.indexOf(taskId(i)) < localData.get ? task.props.answer : false} onChange={e => check(e, task)}>
+                        <div hidden={oneTask} className="lesson-task-number">{i+1}.</div>
+                        <Task locked={!unlockedTask(i)} correct={displayAnswer(i) ? task.props.answer : false} onChange={e => check(e, task)}>
                             {task}
                         </Task>
                     </div>
@@ -71,7 +70,7 @@ export const Lesson = ({localData}) => {
             }
         </div>
         <div hidden={nextHidden} className="lesson-next-container">
-            <div hidden={nextHidden} className="lesson-next" onClick={() => nav(nextLesson())}>Далее</div>
+            <div hidden={nextHidden} className="lesson-next" onClick={() => nav(`/lesson/${localData.nextLesson(theme, subTheme, lesson)}`)}>Далее</div>
         </div>
     </div>
 }

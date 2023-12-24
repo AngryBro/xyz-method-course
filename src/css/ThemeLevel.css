@@ -1,0 +1,17 @@
+.themelevel-container {
+    display: flex;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.themelevel-lock {
+    transform: translateY(20px);
+    margin-left: 10px;
+}
+.themelevel-progress {
+    margin-left: 10px;
+}

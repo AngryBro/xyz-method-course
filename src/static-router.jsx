@@ -70,7 +70,7 @@ export const Routes = ({children}) => {
                     return false
                 }
                 for(let i = 0; i < sample.length; i++) {
-                    if(sample[i] !== "*" && sample[i] !== route[i]) {
+                    if((sample[i] === "*" && route[i] === "") || (sample[i] !== "*" && sample[i] !== route[i])) {
                         return false
                     }
                 }
