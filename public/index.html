@@ -1,93 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
+    <title>Метод координат</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div hidden>
-      \(
-        \def\mequiv#1#2#3{{
-        #1 \equiv #2 ~~\left(\operatorname{mod}{~#3}\right)
-        }}
-        \def\cases#1{{
-          \begin{cases}
-              #1
-          \end{cases}
-        }}
-        \def\union#1{{
-          \left[
-              \begin{array}{l}
-                  #1
-              \end{array}
-          \right.
-        }}
-        \def\frame#1{{
-          \begin{array}{|c|}
-              \hline
-                  #1
-              \\ \hline
-          \end{array}
-        }}
-        \def\RR{{ \mathbb{R} }}
-        \def\QQ{{\mathbb{Q}}}
-        \def\ZZ{{\mathbb{Z}}}
-        \def\NN{{\mathbb{N}}}
-        \def\LR{{~~\Leftrightarrow~~}}
-        \def\tg#1{{\operatorname{tg}{#1}}}
-        \def\tgsqr#1{{\operatorname{tg^2}{#1}}}
-        \def\ctg#1{{\operatorname{ctg}{#1}}}
-        \def\ctgsqr#1{{\operatorname{ctg^2}{#1}}}
-        \def\LLR{{\Longleftrightarrow}}
-        \def\ndiv{{\not\hspace{-0.1pt}\vdots~}}
-        \def\div{{~\vdots~}}
-        \def\degree#1{{#1^{\circ}}}
-        \def\sgn#1{{\operatorname{sgn}{#1}}}
-        \def\monotone#1{{\operatorname{монотонная}{#1}}}
-        \def\increasing#1{{\operatorname{возрастающая}{#1}}}
-        \def\decreasing#1{{\operatorname{убывающая}{#1}}}
-        \def\min#1{{\operatorname{min}{#1}}}
-        \def\max#1{{\operatorname{max}{#1}}}
-        \def\vector#1{{\overrightarrow{#1}}}
-        \def\veca{{\vec{a}}}
-        \def\vecb{{\vec{b}}}
-      \)
-    </div>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <!-- <script>
-      (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";   // use the location of your MathJax
-    var config = 'MathJax.Hub.Config({' +
-        'extensions: ["tex2jax.js"],' +
-        'jax: ["input/TeX","output/HTML-CSS"]' +
-        '});' +
-        'MathJax.Hub.Startup.onload();';
-    if (window.opera) {
-        script.innerHTML = config
-    } else {
-        script.text = config
-    }
-    script.addEventListener('load', function() {
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    })
-    document.getElementsByTagName("head")[0].appendChild(script);
-})();
-    </script> -->
   </body>
 </html>

@@ -1,4 +1,5 @@
 import { DATA } from "./DATA"
+import { Router } from "./Router"
 import { ThemeLevel } from "./ThemeLevel"
 import { Title } from "./Title"
 import "./css/Main.css"
@@ -11,6 +12,9 @@ export const Main = ({tasksDone, lastLesson, reset}) => {
 
     return <div className="main">
         <Title>Курс: Метод координат в стереометрии</Title>
+        <div className="main-router-container">
+            <Router path={{}} />
+        </div>
         <p>
             Курс состоит из четырёх блоков:
         </p>

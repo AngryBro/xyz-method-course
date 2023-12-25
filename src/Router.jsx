@@ -8,21 +8,30 @@ export const Router = ({path}) => {
 
 
     const themeName = () => {
+        if(theme === undefined) {
+            return ""
+        }
         return `${theme}. ${DATA[theme].name}`
     }
 
     const subThemeName = () => {
+        if(subTheme === undefined) {
+            return ""
+        }
         return `${subTheme}. ${DATA[theme][subTheme].name}`
     }
 
     const lessonName = () => {
+        if(lesson === undefined) {
+            return ""
+        }
         return `${lesson}. ${DATA[theme][subTheme][lesson].name}`
     }
 
     const nav = useNavigate()
 
     return <div className="router">
-        <div onClick={() => nav("/")} className="u router-pointer">Главная</div>
+        <div onClick={() => nav("/")} className={theme === undefined ? "" : `u router-pointer`}>Главная</div>
         <div className="router-slash">/</div>
         <div onClick={() => subTheme === undefined?1:nav(`/${theme}`)} className={`${subTheme === undefined?"":"u router-pointer"}`}>{themeName()}</div>
         {

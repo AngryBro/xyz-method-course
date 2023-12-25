@@ -7,6 +7,7 @@ export const DATA = {
             name: "Точка",
             1: {
                 name: "Координаты точки",
+                video: "https://www.youtube.com/embed/gwhwM9_5cfY?si=lPSFoLgiqfmwm9SP",
                 conspect: <div>
                     <div>
                         Точка <TEX>{"A"}</TEX> с координатами <TEX>{"A_x,~A_y,~A_z:~A(A_x;A_y;A_z)"}</TEX>.
@@ -305,7 +306,7 @@ export const DATA = {
                         Обозначение: <TEX>{"\\vector{n}(\\alpha)"}</TEX> &mdash; нормальный вектор плоскости <TEX>{"\\alpha"}</TEX>.
                     </div>
                     <div>
-                        Если плоскость <TEX>{"\\alpha \\parallel \\vector{a},\\vector{b}"}</TEX>,
+                        Если плоскость <TEX>{"\\alpha \\parallel \\vector{a},\\vector{b};~\\vector{a} \\not\\parallel \\vector{b}"}</TEX>,
                         то нормальный вектор можно найти по следующему алгоритму:
                     </div>
                     <div>
@@ -389,6 +390,22 @@ export const DATA = {
             name: "Углы",
             1: {
                 name: "Угол между прямыми",
+                conspect: <div>
+                    <div>
+                        Угол между объектами <TEX>{"a"}</TEX> и <TEX>{"b"}</TEX> обозначается
+                        <TEX>{"~\\angle(a,b)"}</TEX>.
+                    </div>
+                    <div>
+                        Угол между неограниченными объектами (например, прямыми, плоскостями) находится
+                        в промежутке <TEX>{"[0^{\\circ};90^{\\circ}]"}</TEX>.
+                    </div>
+                    <div>
+                        Для поиска угла между прямыми нужно найти их направляющие векторы.
+                    </div>
+                    <center>
+                    <TEX>{"\\cos{\\angle(a,b)} = \\left|\\cos{\\angle\\left( \\vector{a},\\vector{b} \\right)}\\right|"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                         <div answer="1">
                             <div>
@@ -406,6 +423,15 @@ export const DATA = {
             },
             2: {
                 name: "Угол между прямой и плоскостью",
+                conspect: <div>
+                    <div>
+                        Для поиска угла между прямой и плоскостью нужно найти
+                        направляющий вектор прямой и нормальный вектор плоскости.
+                    </div>
+                    <center>
+                        <TEX>{"\\sin{\\angle(a, \\alpha)} = \\left| \\cos{\\angle\\left( \\vector{a},\\vector{n}(\\alpha) \\right)} \\right|"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -425,6 +451,15 @@ export const DATA = {
             },
             3: {
                 name: "Угол между плоскостями",
+                conspect: <div>
+                    <div>
+                        Для поиска угла между плоскостями нужно найти
+                        нормальные векторы плоскостей.
+                    </div>
+                    <center>
+                        <TEX>{"\\cos{\\angle(\\alpha,\\beta)} = \\left| \\cos{\\angle\\left( \\vector{n}(\\alpha),\\vector{n}(\\beta) \\right)} \\right|"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -447,6 +482,17 @@ export const DATA = {
             name: "Расстояния",
             1: {
                 name: "Расстояние между точками",
+                conspect: <div>
+                    <div>
+                        Расстояние между объектами <TEX>{"a"}</TEX> и <TEX>{"b"}</TEX> обозначается <TEX>{"\\rho(a,b)"}</TEX>.
+                    </div>
+                    <div>
+                        Для поиска расстояния между точками находится вектор с началом и концом в этих точках.
+                    </div>
+                    <center>
+                        <TEX>{"\\rho(A,B) = AB = \\left| \\vector{AB} \\right|"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Даны точки <TEX>{"A(2;1;4),~B(4;1;4)"}</TEX>.
@@ -457,6 +503,16 @@ export const DATA = {
             },
             2: {
                 name: "Расстояние от точки до прямой",
+                conspect: <div>
+                    <div>
+                        Для поиска расстояния от точки <TEX>{"A"}</TEX> до
+                        прямой <TEX>{"a"}</TEX> нужно найти точку <TEX>{"B \\in a"}</TEX> и
+                        направляющий вектор прямой. 
+                    </div>
+                    <center>
+                        <TEX>{"\\rho(A,a) = \\displaystyle \\sqrt{\\vector{AB}^2 - \\frac{\\left(\\vector{AB} \\cdot \\vector{a}\\right)^2}{\\vector{a}^2}}"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         Даны точки <TEX>{"A(-1;-3;-3),~B(-5;0;4),~C(1;-2;-1)"}</TEX>.
@@ -470,6 +526,17 @@ export const DATA = {
             },
             3: {
                 name: "Расстояние от точки до плоскости",
+                conspect: <div>
+                    <div>
+                        Для поиска расстояния от точки до плоскости нужно найти уравнение плоскости.
+                    </div>
+                    <div>
+                        Если уравнение плоскости <TEX>{"\\alpha:~~a\\cdot x+b\\cdot y+c\\cdot z+d=0"}</TEX>, то
+                    </div><br />
+                    <center>
+                        <TEX>{"\\rho(A,\\alpha) = \\displaystyle \\frac{\\left| a\\cdot A_x + b \\cdot A_y + c \\cdot A_z + d \\right|}{\\sqrt{a^2+b^2+c^2}}"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Даны точки <TEX>{"A(3;-4;-2),~B(3;0;-1),~C(-4;-4;-5),~D(-4;4;-3)"}</TEX>.</div>
@@ -484,6 +551,15 @@ export const DATA = {
             },
             4: {
                 name: "Расстояние от прямой до плоскости",
+                conspect: <div>
+                    <div>
+                        Для поиска расстояния между прямой <TEX>{"a"}</TEX> и параллельной ей плоскостью
+                        нужно выбрать любую точку <TEX>{"A \\in a"}</TEX>.
+                    </div>
+                    <center>
+                        <TEX>{"\\rho(a, \\alpha) = \\rho(A,\\alpha)"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -496,6 +572,15 @@ export const DATA = {
             },
             5: {
                 name: "Расстояние между плоскостями",
+                conspect: <div>
+                    <div>
+                        Для поиска расстояния между плоскостью <TEX>{"\\alpha"}</TEX> и параллельной ей плоскостью
+                        нужно выбрать любую точку <TEX>{"A \\in \\alpha"}</TEX>.
+                    </div>
+                    <center>
+                        <TEX>{"\\rho(\\alpha,\\beta) = \\rho(A,\\beta)"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -510,6 +595,29 @@ export const DATA = {
             },
             6: {
                 name: "Расстояние между прямыми",
+                conspect: <div>
+                    <div>
+                        Для поиска расстояния между прямыми нужно найти направляющие векторы
+                        прямых и выбрать любую точку на любой из прямых.
+                    </div>
+                    <div>
+                        Нужно проверить, параллельны ли прямые, так как расстояние между параллельными
+                        и не параллельными прямыми вычисляется по-разному.
+                    </div>
+                    <div>
+                        Если <TEX>{"a \\parallel b,~A \\in a"}</TEX>:
+                    </div>
+                    <center>
+                        <TEX>{"\\rho(a,b) = \\rho(A, b)"}</TEX>
+                    </center>
+                    <div>
+                        Если <TEX>{"a \\not\\parallel b"}</TEX>, то нужно найти уравнение
+                        плоскости <TEX>{"\\alpha:~~b \\in \\alpha \\parallel a"}</TEX>:
+                    </div>
+                    <center>
+                        <TEX>{"\\rho(a,b) = \\rho(a, \\alpha)"}</TEX>
+                    </center>
+                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Прямая <TEX>{"a"}</TEX> проходит через точки <TEX>{"A(-3;-5;1)~"}</TEX>

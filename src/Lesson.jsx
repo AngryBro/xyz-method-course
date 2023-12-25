@@ -27,7 +27,7 @@ export const Lesson = ({localData}) => {
         if(e.target.value === task.props.answer) {
             let finished = localData.next()
             if(finished) {
-                setTimeout(() => nav("/"), 3000)
+                setTimeout(() => nav("/"), 1000)
             }
         }
     }
@@ -39,7 +39,9 @@ export const Lesson = ({localData}) => {
 
     const unlockedTask = (i) => localData.unlockedTask(theme, subTheme, lesson, i)
 
-    const nextHidden = localData.nextLesson(theme, subTheme, lesson)=== undefined || !localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson))
+    const video = data.video === undefined?`https://www.youtube.com/embed/dQw4w9WgXcQ?si=3OX__9rbC9Rjp3xl`:data.video
+
+    const nextHidden = localData.nextLesson(theme, subTheme, lesson) === undefined || !localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson))
     
     const oneTask = DATA[theme][subTheme][lesson].tasks.length === 1
 
@@ -49,9 +51,7 @@ export const Lesson = ({localData}) => {
             <Router path={{theme, subTheme, lesson}} />
         </div>
         <div className="lesson-title">Лекция</div>
-        {/* <iframe width={playerWidth} height={playerWidth * 720/1280} src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=9vui1wxSbfrgvUWm" title="YouTube video player" allowFullScreen>
-            
-        </iframe> */}
+        <iframe width={playerWidth} height={playerWidth * 720/1280} src={video} title="YouTube video player" allowFullScreen></iframe>
         <div className="lesson-title">Конспект</div>
         <div className="lesson-conspect">
             {data.conspect}
