@@ -5,13 +5,16 @@ import "./css/Lesson.css"
 import { useEffect, useRef, useState } from "react"
 import { Task } from "./Task"
 import { Router } from "./Router"
+const slidesImport = require.context('./slides', true);
+const slidesAll = slidesImport.keys().map(image => slidesImport(image));
+
 
 export const Lesson = ({localData}) => {
 
     const nav = useNavigate()
     const id = useLocation().split("/")[2]
     const ids = id.split(".")
-    const [theme, subTheme, lesson] = id.split(".")
+    const [theme, subTheme, lesson] = ids
     const data = DATA[ids[0]][ids[1]][ids[2]]
     const container = useRef()
     //eslint-disable-next-line
@@ -45,6 +48,19 @@ export const Lesson = ({localData}) => {
     
     const oneTask = DATA[theme][subTheme][lesson].tasks.length === 1
 
+    const slides = () => {
+        let count = 0
+        const maxSubTheme = 20
+        for(let th = 1; th <= Number(theme); th++) {
+            for(let subth = 1; subth < (String(th) === theme ? subTheme : maxSubTheme); subth++) {
+                if(!(String(subth) in DATA[th])) break
+                count += Object.keys((DATA[th][subth])).length - 1
+            }
+        }
+        console.log(count, slidesAll.length)
+        return slidesAll[count + Number(lesson - 1)]
+    }
+
     return <div ref={container}>
         <Title>{[subTheme, lesson].join(".")}. {data.name}</Title>
         <div className="lesson-router-container">
@@ -54,7 +70,7 @@ export const Lesson = ({localData}) => {
         <iframe width={playerWidth} height={playerWidth * 720/1280} src={video} title="YouTube video player" allowFullScreen></iframe>
         <div className="lesson-title">Конспект</div>
         <div className="lesson-conspect">
-            {data.conspect}
+            <iframe width={"100%"} height={playerWidth * 720/1280} src={slides()} title="Slides"></iframe>
         </div>
         <div className="lesson-title">Задач{oneTask?"а":"и"}</div>
         <div className="lesson-tasks">

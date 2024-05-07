@@ -1,5 +1,6 @@
 import { TEX } from "./TEX";
 
+
 export const DATA = {
     1: {
         name: "Координатное пространство",
@@ -7,12 +8,6 @@ export const DATA = {
             name: "Точка",
             1: {
                 name: "Координаты точки",
-                video: "https://www.youtube.com/embed/gwhwM9_5cfY?si=lPSFoLgiqfmwm9SP",
-                conspect: <div>
-                    <div>
-                        Точка <TEX>{"A"}</TEX> с координатами <TEX>{"A_x,~A_y,~A_z:~A(A_x;A_y;A_z)"}</TEX>.
-                    </div>
-                </div>,
                 tasks: [
                     <div answer1="15" answer="1">
                         <div>Даны точки:  <TEX>{"A(1;~2;~3),~B(4;~5;~6),~C(7;~8;~9)"}</TEX>.</div>
@@ -22,24 +17,6 @@ export const DATA = {
             },
             2: {
                 name: "Точка на отрезке",
-                conspect: <div>
-                    <div>
-                        Запись <TEX>{"a_i=b_i~"}</TEX> означает
-                        <TEX>{`~\\left\\{\\begin{array}{l}
-                                a_x = b_x \\\\
-                                a_y = b_y \\\\
-                                a_z = b_z
-                            \\end{array}\\right.`}</TEX>.
-                    </div>
-                    <div>
-                        Если <TEX>{"C \\in AB,~\\displaystyle\\frac{AC}{BC}=\\frac{a}{b}"}</TEX>,
-                        то <TEX>{"C_i = \\displaystyle\\frac{1}{a+b}(b \\cdot A_i + a \\cdot B_i)"}</TEX>.
-                    </div>
-                    <div>
-                        Если <TEX>{"C~"}</TEX> &ndash; середина <TEX>{"AB"}</TEX>,
-                        то <TEX>{"C_i = \\displaystyle\\frac{1}{2}(A_i + B_i)"}</TEX>.
-                    </div>
-                </div>,
                 tasks: [
                     <div answer1="-2-2-5" answer="1">
                         <div>Найдите координаты середины отрезка <TEX>{"AB"}</TEX>,</div>
@@ -72,10 +49,6 @@ export const DATA = {
             
             1: {
                 name: "Координаты вектора",
-                conspect: <div>
-                    <div>Вектор <TEX>{"\\vector{a}~"}</TEX> с координатами <TEX>{"a_x,~a_y,~a_z:~\\vector{a}\\{a_x;a_y;a_z\\}"}</TEX>.</div>
-                    <div>Поиск координат вектора <TEX>{"\\vector{AB}:~AB_i = B_i - A_i"}</TEX>.</div>
-                </div>,
                 tasks: [
                     <div answer1="-6-24" answer="1">
                         <div>
@@ -98,10 +71,6 @@ export const DATA = {
             },
             2: {
                 name: "Действия с векторами",
-                conspect: <div>
-                    Если <TEX>{"\\vector{c} = m\\cdot\\vector{a} + n \\cdot \\vector{b}"}</TEX>,
-                    то <TEX>{"c_i = m \\cdot a_i + n \\cdot b_i"}</TEX>.
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -131,10 +100,6 @@ export const DATA = {
             },
             3: {
                 name: "Параллельность векторов",
-                conspect: <div>
-                    Если для целого <TEX>{"k~"}</TEX> верно <TEX>{"\\vector{a}=k \\cdot \\vector{b}"}</TEX>,
-                    то <TEX>{"\\vector{a} \\parallel \\vector{b}"}</TEX>.
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Даны векторы <TEX>{"\\vector{a}\\{-3;6;15\\}~"}</TEX>и 
@@ -154,9 +119,6 @@ export const DATA = {
             },
             4: {
                 name: "Скалярное произведение",
-                conspect: <div>
-                    <TEX>{"\\vector{a} \\cdot \\vector{b} = a_x \\cdot b_x + a_y \\cdot b_y + a_z \\cdot b_z"}</TEX>.
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Дано <TEX>{"\\vector{a}\\{3;-4;-2\\},~\\vector{b}\\{-2;-1;4\\}"}</TEX>.</div>
@@ -170,9 +132,6 @@ export const DATA = {
             },
             5: {
                 name: "Длина вектора",
-                conspect: <div>
-                    <TEX>{"\\left| \\vector{a} \\right| = \\sqrt{\\vector{a} \\cdot \\vector{a}} =\\sqrt{a_x^2+a_y^2+a_z^2}"}</TEX>.
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Дано <TEX>{"\\vector{a}\\{-4;-2;4\\}"}</TEX>.
@@ -186,11 +145,6 @@ export const DATA = {
             },
             6: {
                 name: "Угол между векторами",
-                conspect: <div>
-                    <TEX>{`\\cos{\\angle\\left(\\vector{a},\\vector{b}\\right)} 
-                        = \\displaystyle\\frac{\\vector{a} \\cdot \\vector{b}}{\\left| 
-                        \\vector{a} \\right|\\cdot \\left|\\vector{b}\\right|}`}</TEX>.
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Дано <TEX>{"\\vector{a}\\{-5;-2;-3\\},~\\vector{b}\\{-1;-2;-3\\}"}</TEX>.</div>
@@ -208,9 +162,6 @@ export const DATA = {
             
             1: {
                 name: "Направляющий вектор",
-                conspect: <div>
-                    Направляющий вектор прямой &mdash; вектор, параллельный данной прямой.
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -231,47 +182,6 @@ export const DATA = {
             },
             2: {
                 name: "Уравнения прямой",
-                conspect: <div>
-                    <div>
-                        Прямая задаётся точкой <TEX>{"A \\in a~"}</TEX> и направляющим вектором <TEX>{"\\vector{a} \\parallel a"}</TEX>. 
-                    </div>
-                    <div>
-                        Если <TEX>{"a_x,a_y,a_z \\neq 0"}</TEX>, то уравнения прямой:
-                    </div>
-                    <center>
-                        <TEX>{"\\displaystyle\\frac{x - A_x}{a_x} = \\frac{y - A_y}{a_y} = \\frac{z - A_z}{a_z}"}</TEX>.
-                    </center>
-                    <div>
-                    Если <TEX>{"a_z = 0"}</TEX>, то уравнения прямой:
-                    </div>
-                    <center>
-                        <TEX>
-                            {`
-                                \\left\\{
-                                    \\begin{array}{l}
-                                        \\displaystyle\\frac{x - A_x}{a_x} = \\frac{y - A_y}{a_y} \\\\
-                                        z = A_z
-                                    \\end{array}
-                                \\right.
-                            `}
-                        </TEX>.
-                    </center>
-                    <div>
-                    Если <TEX>{"a_y = a_z = 0"}</TEX>, то уравнения прямой:
-                    </div>
-                    <center>
-                        <TEX>
-                            {`
-                                \\left\\{
-                                    \\begin{array}{l}
-                                        y = A_y \\\\
-                                        z = A_z
-                                    \\end{array}
-                                \\right.
-                            `}
-                        </TEX>.
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -297,48 +207,6 @@ export const DATA = {
             
             1: {
                 name: "Нормальный вектор",
-                conspect: <div>
-                    <div>
-                        Нормальным называется вектор, перпендикулярный к плоскости.
-                        Он ищется на черновике. В чистовик записывается только доказательство.
-                    </div>
-                    <div>
-                        Обозначение: <TEX>{"\\vector{n}(\\alpha)"}</TEX> &mdash; нормальный вектор плоскости <TEX>{"\\alpha"}</TEX>.
-                    </div>
-                    <div>
-                        Если плоскость <TEX>{"\\alpha \\parallel \\vector{a},\\vector{b};~\\vector{a} \\not\\parallel \\vector{b}"}</TEX>,
-                        то нормальный вектор можно найти по следующему алгоритму:
-                    </div>
-                    <div>
-                        1. Составить таблицу <TEX>{`~~\\left(\\begin{array}{l} 
-                            0 & -a_z & a_y \\\\
-                            a_z & 0 & -a_x \\\\
-                            -a_y & a_x & 0
-                        \\end{array}\\right)`}</TEX>
-                    </div>
-                    <div>
-                        2. Считая каждую строку как координаты вектора, найти скалярное произведение
-                        вектора <TEX>{"\\vector{b}"}</TEX> с каждой вектор-строкой.
-                    </div>
-                    <div>
-                        3. Полученные произведения это координаты <TEX>{"\\vector{n}(\\alpha)"}</TEX>.
-                    </div>
-                    <div>Доказательство в чистовик:</div>
-                    <div>
-                        <TEX>{"\\alpha \\parallel \\vector{a},\\vector{b};~\\vector{a} \\not\\parallel\\vector{b};"}</TEX>
-                        <TEX>{"~~~~\\vector{n}\\{n_x;n_y;n_z\\}"}</TEX> &ndash; нормаль к <TEX>{"\\alpha"}</TEX>, так как
-                    </div>
-                    <div>
-                        <TEX>{`\\left\\{\\begin{array}{l}
-                            \\vector{n} \\cdot \\vector{a} = 0 \\\\
-                            \\vector{n} \\cdot \\vector{b} = 0
-                        \\end{array}\\right. ~\\Rightarrow ~
-                        \\left\\{\\begin{array}{l}
-                            \\vector{n} \\perp \\vector{a} \\\\
-                            \\vector{n} \\perp \\vector{b}
-                        \\end{array}\\right. ~\\Rightarrow~ \\vector{n} \\perp \\alpha`}</TEX>.
-                    </div>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Даны векторы: <TEX>{"\\vector{a}\\left\\{-\\frac{5}{3};\\frac{1}{3};\\frac{4}{3}\\right\\},~\\vector{b}\\{-8;1;7\\}"}</TEX>.</div>
@@ -355,13 +223,6 @@ export const DATA = {
             },
             2: {
                 name: "Уравнение плоскости",
-                conspect: <div>
-                    <div>Плоскость <TEX>{"\\alpha~"}</TEX> задаётся точкой <TEX>{"A \\in \\alpha~"}</TEX> и <TEX>{"~\\vector{n} = \\vector{n}(\\alpha)"}</TEX>.</div>
-                    <div>Уравнение плоскости <TEX>{"\\alpha"}</TEX>:</div>
-                    <center>
-                        <TEX>{"n_x(x - A_x) + n_y(y - A_y) + n_z(z - A_z) = 0"}</TEX>.
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -390,22 +251,6 @@ export const DATA = {
             name: "Углы",
             1: {
                 name: "Угол между прямыми",
-                conspect: <div>
-                    <div>
-                        Угол между объектами <TEX>{"a"}</TEX> и <TEX>{"b"}</TEX> обозначается
-                        <TEX>{"~\\angle(a,b)"}</TEX>.
-                    </div>
-                    <div>
-                        Угол между неограниченными объектами (например, прямыми, плоскостями) находится
-                        в промежутке <TEX>{"[0^{\\circ};90^{\\circ}]"}</TEX>.
-                    </div>
-                    <div>
-                        Для поиска угла между прямыми нужно найти их направляющие векторы.
-                    </div>
-                    <center>
-                    <TEX>{"\\cos{\\angle(a,b)} = \\left|\\cos{\\angle\\left( \\vector{a},\\vector{b} \\right)}\\right|"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                         <div answer="1">
                             <div>
@@ -423,15 +268,6 @@ export const DATA = {
             },
             2: {
                 name: "Угол между прямой и плоскостью",
-                conspect: <div>
-                    <div>
-                        Для поиска угла между прямой и плоскостью нужно найти
-                        направляющий вектор прямой и нормальный вектор плоскости.
-                    </div>
-                    <center>
-                        <TEX>{"\\sin{\\angle(a, \\alpha)} = \\left| \\cos{\\angle\\left( \\vector{a},\\vector{n}(\\alpha) \\right)} \\right|"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -451,15 +287,6 @@ export const DATA = {
             },
             3: {
                 name: "Угол между плоскостями",
-                conspect: <div>
-                    <div>
-                        Для поиска угла между плоскостями нужно найти
-                        нормальные векторы плоскостей.
-                    </div>
-                    <center>
-                        <TEX>{"\\cos{\\angle(\\alpha,\\beta)} = \\left| \\cos{\\angle\\left( \\vector{n}(\\alpha),\\vector{n}(\\beta) \\right)} \\right|"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -482,17 +309,6 @@ export const DATA = {
             name: "Расстояния",
             1: {
                 name: "Расстояние между точками",
-                conspect: <div>
-                    <div>
-                        Расстояние между объектами <TEX>{"a"}</TEX> и <TEX>{"b"}</TEX> обозначается <TEX>{"\\rho(a,b)"}</TEX>.
-                    </div>
-                    <div>
-                        Для поиска расстояния между точками находится вектор с началом и концом в этих точках.
-                    </div>
-                    <center>
-                        <TEX>{"\\rho(A,B) = AB = \\left| \\vector{AB} \\right|"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Даны точки <TEX>{"A(2;1;4),~B(4;1;4)"}</TEX>.
@@ -503,16 +319,6 @@ export const DATA = {
             },
             2: {
                 name: "Расстояние от точки до прямой",
-                conspect: <div>
-                    <div>
-                        Для поиска расстояния от точки <TEX>{"A"}</TEX> до
-                        прямой <TEX>{"a"}</TEX> нужно найти точку <TEX>{"B \\in a"}</TEX> и
-                        направляющий вектор прямой. 
-                    </div>
-                    <center>
-                        <TEX>{"\\rho(A,a) = \\displaystyle \\sqrt{\\vector{AB}^2 - \\frac{\\left(\\vector{AB} \\cdot \\vector{a}\\right)^2}{\\vector{a}^2}}"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         Даны точки <TEX>{"A(-1;-3;-3),~B(-5;0;4),~C(1;-2;-1)"}</TEX>.
@@ -526,17 +332,6 @@ export const DATA = {
             },
             3: {
                 name: "Расстояние от точки до плоскости",
-                conspect: <div>
-                    <div>
-                        Для поиска расстояния от точки до плоскости нужно найти уравнение плоскости.
-                    </div>
-                    <div>
-                        Если уравнение плоскости <TEX>{"\\alpha:~~a\\cdot x+b\\cdot y+c\\cdot z+d=0"}</TEX>, то
-                    </div><br />
-                    <center>
-                        <TEX>{"\\rho(A,\\alpha) = \\displaystyle \\frac{\\left| a\\cdot A_x + b \\cdot A_y + c \\cdot A_z + d \\right|}{\\sqrt{a^2+b^2+c^2}}"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Даны точки <TEX>{"A(3;-4;-2),~B(3;0;-1),~C(-4;-4;-5),~D(-4;4;-3)"}</TEX>.</div>
@@ -551,15 +346,6 @@ export const DATA = {
             },
             4: {
                 name: "Расстояние от прямой до плоскости",
-                conspect: <div>
-                    <div>
-                        Для поиска расстояния между прямой <TEX>{"a"}</TEX> и параллельной ей плоскостью
-                        нужно выбрать любую точку <TEX>{"A \\in a"}</TEX>.
-                    </div>
-                    <center>
-                        <TEX>{"\\rho(a, \\alpha) = \\rho(A,\\alpha)"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -572,15 +358,6 @@ export const DATA = {
             },
             5: {
                 name: "Расстояние между плоскостями",
-                conspect: <div>
-                    <div>
-                        Для поиска расстояния между плоскостью <TEX>{"\\alpha"}</TEX> и параллельной ей плоскостью
-                        нужно выбрать любую точку <TEX>{"A \\in \\alpha"}</TEX>.
-                    </div>
-                    <center>
-                        <TEX>{"\\rho(\\alpha,\\beta) = \\rho(A,\\beta)"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>
@@ -595,29 +372,6 @@ export const DATA = {
             },
             6: {
                 name: "Расстояние между прямыми",
-                conspect: <div>
-                    <div>
-                        Для поиска расстояния между прямыми нужно найти направляющие векторы
-                        прямых и выбрать любую точку на любой из прямых.
-                    </div>
-                    <div>
-                        Нужно проверить, параллельны ли прямые, так как расстояние между параллельными
-                        и не параллельными прямыми вычисляется по-разному.
-                    </div>
-                    <div>
-                        Если <TEX>{"a \\parallel b,~A \\in a"}</TEX>:
-                    </div>
-                    <center>
-                        <TEX>{"\\rho(a,b) = \\rho(A, b)"}</TEX>
-                    </center>
-                    <div>
-                        Если <TEX>{"a \\not\\parallel b"}</TEX>, то нужно найти уравнение
-                        плоскости <TEX>{"\\alpha:~~b \\in \\alpha \\parallel a"}</TEX>:
-                    </div>
-                    <center>
-                        <TEX>{"\\rho(a,b) = \\rho(a, \\alpha)"}</TEX>
-                    </center>
-                </div>,
                 tasks: [
                     <div answer="1">
                         <div>Прямая <TEX>{"a"}</TEX> проходит через точки <TEX>{"A(-3;-5;1)~"}</TEX>
