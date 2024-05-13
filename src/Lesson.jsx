@@ -72,6 +72,7 @@ export const Lesson = ({localData}) => {
         <div className="lesson-conspect">
             <iframe width={"100%"} height={playerWidth * 720/1280} src={slides()} title="Slides"></iframe>
         </div>
+        <div>{data.material}</div>
         <div className="lesson-title">Задач{oneTask?"а":"и"}</div>
         <div className="lesson-tasks">
             {

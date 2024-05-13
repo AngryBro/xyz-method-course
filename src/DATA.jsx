@@ -1,4 +1,6 @@
 import { TEX } from "./TEX";
+import { GEOGERBA, Geogebra } from "./Geogebra";
+
 
 
 export const DATA = {
@@ -401,7 +403,8 @@ export const DATA = {
                     <div answer="1">
                         Ответ 1.
                     </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.PRISM4} />
             },
             2: {
                 name: "Правильная четырёхугольная пирамида",
@@ -409,7 +412,8 @@ export const DATA = {
                     <div answer="1">
                         Ответ 1.
                     </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.PYRAMID4} />
             },
         },
         2: {
@@ -420,7 +424,8 @@ export const DATA = {
                     <div answer="1">
                         Ответ 1.
                     </div>
-                ]   
+                ],
+                material: <Geogebra name={GEOGERBA.PRISM3} />   
             },
             2: {
                 name: "Правильная треугольная пирамида",
@@ -428,7 +433,8 @@ export const DATA = {
                     <div answer="1">
                         Ответ 1.
                     </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.PYRAMID3} />
             },
         },
         3: {
@@ -439,7 +445,8 @@ export const DATA = {
                     <div answer="1">
                         Ответ 1.
                     </div>
-                ]   
+                ],
+                material: <Geogebra name={GEOGERBA.PRISM6} />   
             },
             2: {
                 name: "Правильная шестиугольная пирамида",
@@ -447,7 +454,8 @@ export const DATA = {
                     <div answer="1">
                         Ответ 1.
                     </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.PYRAMID6} />
             },
         },
         4: {
@@ -458,7 +466,8 @@ export const DATA = {
                     <div answer="1">
                             Ответ 1.
                         </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.CONE} />
             },
             2: {
                 name: "Цилиндр",
@@ -466,7 +475,8 @@ export const DATA = {
                     <div answer="1">
                             Ответ 1.
                         </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.CYLINDER} />
             },
             3: {
                 name: "Шар",
@@ -474,7 +484,8 @@ export const DATA = {
                     <div answer="1">
                             Ответ 1.
                         </div>
-                ]
+                ],
+                material: <Geogebra name={GEOGERBA.SPHERE} />
             },
         },
     },
