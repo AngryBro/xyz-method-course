@@ -27,7 +27,10 @@ export const Lesson = ({localData}) => {
 
 
     const check = (e, task) => {
-        if(e.target.value === task.props.answer) {
+        const standardizeOperators = raw => {
+            return raw.replace(/sqrt/g, "Math.sqrt")
+        }
+        if(standardizeOperators(e.target.value) === standardizeOperators(task.props.answer)) {
             let finished = localData.next()
             if(finished) {
                 setTimeout(() => nav("/"), 1000)

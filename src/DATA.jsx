@@ -2,7 +2,6 @@ import { TEX } from "./TEX";
 import { GEOGERBA, Geogebra } from "./Geogebra";
 
 
-
 export const DATA = {
     1: {
         name: "Координатное пространство",
@@ -492,15 +491,109 @@ export const DATA = {
     4: {
         name: "Задачи стереометрии",
         1: {
-            name: "???????",
+            name: "Задачи ЕГЭ",
             1: {
-                name: "?????????",
+                name: "Точки",
                 tasks: [
                     <div answer="1">
                                 Ответ 1.
                             </div>
                 ]
-            }
-        }
+            },
+            2: {
+                name: "Углы и расстояния",
+                tasks: [
+                    <div answer="1" answer1="5">
+                                В правильной шестиугольной призме
+
+                                <TEX>
+                                    ~ABCDEFA_1B_1C_1D_1E_1F_1~
+                                </TEX> 
+                                все ребра равны <TEX>{`\\sqrt{5}`}</TEX>.<br/>
+                                Найдите расстояние между точками <TEX>B</TEX> и <TEX>E_1</TEX>.
+                    </div>,
+                    <div answer="1" answer1="60">
+                        В кубе <TEX>ABCDA_1B_1C_1D_1</TEX> точка <TEX>K</TEX> &ndash; 
+                        середина ребра <TEX>AA_1</TEX>, точка <TEX>L</TEX> &ndash; середина
+                        ребра <TEX>A_1D_1</TEX>,
+                        точка <TEX>M</TEX> &ndash; середина ребра <TEX>A_1B_1</TEX>. 
+                        <br/>Найдите угол <TEX>MLK</TEX>.
+                    </div>,
+                    <div answer="1" answer1="60">
+                        В кубе <TEX>ABCDA_1B_1C_1D_1</TEX> найдите угол между
+                        прямыми <TEX>AD_1</TEX> и <TEX>B_1D_1</TEX>. 
+                    </div>,
+                    <div answer="1" answer1="60">
+                        В правильной шестиугольной призме <TEX>ABCDEFA_1B_1C_1D_1E_1F_1</TEX>, все
+                        ребра которой равны 8, найдите угол между прямыми <TEX>FA</TEX> и <TEX>D_1E_1</TEX>. 
+                    </div>,
+                    <div answer="1" answer1="45">
+                        В правильной треугольной призме <TEX>ABCA_1B_1C_1</TEX>, все ребра
+                        которой равны 3, найдите угол между
+                        прямыми <TEX>AA_1</TEX> и <TEX>BC_1</TEX>. 
+                    </div>,
+                    <div answer="1" answer1="3/sqrt(26)">
+                        В кубе <TEX>ABCDA_1B_1C_1D_1</TEX> все рёбра равны 4. На его
+                        ребре <TEX>BB_1</TEX> отмечена
+                        точка <TEX>K</TEX> так, что <TEX>KB=3</TEX>.
+                        Через точки <TEX>K</TEX> и <TEX>C_1</TEX> проведена
+                        плоскость <TEX>\alpha</TEX>,
+                        параллельная прямой <TEX>BD_1</TEX>.<br/>
+                        Найдите косинус угла между
+                        плоскостями <TEX>\alpha</TEX> и <TEX>(BCC_1)</TEX>.
+                    </div>,
+                    <div answer="1" answer1="3*sqrt(30)/5">
+                        В правильной треугольной призме <TEX>ABCA_1B_1C_1</TEX> сторона <TEX>AB</TEX> основания
+                        равна 12, а высота призмы равна 2. На рёбрах <TEX>B_1C_1</TEX> и <TEX>AB</TEX> отмечены
+                        точки <TEX>P</TEX> и <TEX>Q</TEX> соответственно, причём <TEX>PC_1=3</TEX>, а <TEX>AQ=4</TEX>.
+                        <br/>Найдите расстояние от точки <TEX>B</TEX> до плоскости <TEX>A_1PQ</TEX>.
+                    </div>,
+                    <div answer="1" answer1="90">
+                        В правильной четырехугольной пирамиде <TEX>SABCD</TEX> все ребра равны 5.
+                        На ребрах <TEX>SA,~AB,~BC</TEX> взяты точки <TEX>P,~Q,~R</TEX> соответственно 
+                        так, что <TEX>PA=AQ=RC=2</TEX>.
+                        <br/>Найдите угол между плоскостью <TEX>(PQR)</TEX> и ребром <TEX>SD</TEX>.
+                    </div>,
+                    <div answer="1" answer1="60">
+                        На окружности одного из оснований цилиндра выбраны
+                        точки <TEX>A,~B</TEX> и <TEX>C</TEX>, а на окружности
+                        другого основания &ndash; точка <TEX>C_1</TEX>,
+                        причём <TEX>CC_1</TEX> &ndash; образующая цилиндра,
+                        а <TEX>AC</TEX> &ndash; диаметр основания.
+                        Известно, что <TEX>{`\\angle ACB = 45^{\\circ}`}</TEX>,
+                        , <TEX>{`AB = 2\\sqrt{2},~CC_1=4`}</TEX>.
+                        <br/>Найдите угол между прямыми <TEX>AC_1</TEX> и <TEX>BC</TEX>.    
+                    </div>,
+                    <div answer="1" answer1="">
+
+                    </div>,
+                    <div answer="1" answer1="">
+
+                    </div>,
+                    <div answer="1" answer1="">
+
+                    </div>,
+                    <div answer="1" answer1="">
+
+                    </div>,
+                ]
+            },
+            3: {
+                name: "Площадь сечения",
+                tasks: [
+                    <div answer="1">
+                                Ответ 1.
+                            </div>
+                ]
+            },
+            4: {
+                name: "Объём пирамиды",
+                tasks: [
+                    <div answer="1">
+                                Ответ 1.
+                            </div>
+                ]
+            },
+        },
     }
 }
