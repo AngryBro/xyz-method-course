@@ -29,6 +29,7 @@ export const Lesson = ({localData}) => {
     const check = (e, task) => {
         const standardizeOperators = raw => {
             return raw.replace(/sqrt/g, "Math.sqrt")
+                    .replace(/:/g, "/")
         }
         if(standardizeOperators(e.target.value) === standardizeOperators(task.props.answer)) {
             let finished = localData.next()

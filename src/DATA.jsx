@@ -495,9 +495,53 @@ export const DATA = {
             1: {
                 name: "Точки",
                 tasks: [
-                    <div answer="1">
-                                Ответ 1.
-                            </div>
+                    <div answer="1" answer1="4">
+                         В правильной треугольной пирамиде боковое ребро равно 5,
+                         а сторона основания равна <TEX>{"3\\sqrt{3}"}</TEX>.<br /> 
+                         Найдите высоту пирамиды.       
+                    </div>,
+                    <div answer="1" answer1="sqrt(11)">
+                        Длина диагонали куба <TEX>ABCDA_1B_1C_1D_1</TEX> равна 3.
+                        На луче <TEX>A_1C</TEX>отмечена точка <TEX>P</TEX> так, что <TEX>A_1P = 4</TEX>.
+                        <br /> Найдите длину отрезка <TEX>AP</TEX>. 
+                    </div>,
+                    <div answer="1" answer1="2">
+                        В кубе <TEX>ABCDA_1B_1C_1D_1</TEX> все рёбра равны 4.
+                        На его ребре <TEX>BB_1</TEX> отмечена
+                        точка <TEX>K</TEX> так, что <TEX>KB=3</TEX>. 
+                        Через точки <TEX>K</TEX> и <TEX>C_1</TEX> проведена плоскость <TEX>\alpha</TEX>,
+                        параллельная прямой <TEX>BD_1</TEX>.<br />
+                        Найдите <TEX>A_1P:PB_1</TEX>, где <TEX>P</TEX> &ndash; точка пересечения
+                        плоскости <TEX>\alpha</TEX> с ребром <TEX>A_1B_1</TEX>.
+                    </div>,
+                    <div answer="1" answer1="5">
+                        В правильной треугольной пирамиде <TEX>SABC</TEX> сторона
+                        основания <TEX>AB</TEX> равна 12, 
+                        а боковое ребро <TEX>SA</TEX> равно 13.
+                        Точки <TEX>M</TEX> и <TEX>N</TEX> &ndash; середины
+                        рёбер <TEX>SA</TEX> и <TEX>SB</TEX> соответственно.
+                        Плоскость <TEX>\alpha</TEX> содержит прямую <TEX>MN</TEX> и
+                        перпендикулярна плоскости основания пирамиды. <br />
+                        Найдите в каком отношении плоскость <TEX>\alpha</TEX> делит
+                        медиану <TEX>CE</TEX> основания считая от точки <TEX>C</TEX>.
+                    </div>,
+                    <div answer="1" answer1="1">
+                        В правильной треугольной призме <TEX>ABCA_1B_1C_1</TEX> сторона <TEX>AB</TEX> основания
+                        равна 12, а высота призмы равна 2. На рёбрах <TEX>B_1C_1</TEX> и <TEX>AB</TEX> отмечены
+                        точки <TEX>P</TEX> и <TEX>Q</TEX> соответственно,
+                        причём <TEX>PC_1=3</TEX>, а <TEX>AQ=4</TEX>.
+                        Плоскость <TEX>A_1PQ</TEX> пересекает ребро <TEX>BC</TEX> в точке <TEX>M</TEX>.
+                        <br /> Найдите в каком отношении точка <TEX>M</TEX> делит 
+                        ребро <TEX>BC</TEX>.
+                    </div>,
+                    <div answer="1" answer1="1">
+                        Точка <TEX>E</TEX> лежит на высоте <TEX>SO</TEX>, а 
+                        точка <TEX>F</TEX> &ndash; на боковом ребре <TEX>SC</TEX> правильной
+                        четырёхугольной пирамиды <TEX>SABCD</TEX>, 
+                        причём <TEX>SE:EO=SF:FC=2:1</TEX>. <br />
+                        Найдите в каком отношении плоскость <TEX>BEF</TEX> делит 
+                        ребро <TEX>SD</TEX>.
+                    </div>,
                 ]
             },
             2: {
@@ -561,37 +605,111 @@ export const DATA = {
                         причём <TEX>CC_1</TEX> &ndash; образующая цилиндра,
                         а <TEX>AC</TEX> &ndash; диаметр основания.
                         Известно, что <TEX>{`\\angle ACB = 45^{\\circ}`}</TEX>,
-                        , <TEX>{`AB = 2\\sqrt{2},~CC_1=4`}</TEX>.
+                        <TEX>{`AB = 2\\sqrt{2},~CC_1=4`}</TEX>.
                         <br/>Найдите угол между прямыми <TEX>AC_1</TEX> и <TEX>BC</TEX>.    
                     </div>,
-                    <div answer="1" answer1="">
-
-                    </div>,
-                    <div answer="1" answer1="">
-
-                    </div>,
-                    <div answer="1" answer1="">
-
-                    </div>,
-                    <div answer="1" answer1="">
-
+                    <div answer="1" answer1="90">
+                        В правильной шестиугольной пирамиде <TEX>SABCDEF</TEX> сторона
+                        основания <TEX>AB = 7</TEX>, а боковое ребро <TEX>SA = 10</TEX> .
+                        Точка <TEX>M</TEX>  лежит на ребре <TEX>BC</TEX> ,
+                        причем <TEX>BM = 4</TEX> , точка <TEX>K</TEX>  лежит на 
+                        ребре <TEX>SC</TEX> , причем <TEX>SK = 7</TEX>.<br/>
+                        Найдите угол между плоскостью <TEX>(MKD)</TEX>  и плоскостью основания
+                        пирамиды.
                     </div>,
                 ]
             },
             3: {
                 name: "Площадь сечения",
                 tasks: [
-                    <div answer="1">
-                                Ответ 1.
-                            </div>
+                    <div answer="1" answer1="5">
+                        В прямоугольном параллелепипеде <TEX>ABCDA_1B_1C_1D_1</TEX> ребро <TEX>AB=2</TEX>,
+                        ребро <TEX>{"AD=\\sqrt{5}"}</TEX>, ребро <TEX>AA_1=2</TEX>.
+                        Точка <TEX>K</TEX> &ndash; середина ребра <TEX>BB_1</TEX>.  
+                        <br />Найдите площадь сечения, проходящего 
+                        через точки <TEX>A_1,~D_1,~K</TEX>.     
+                    </div>,
+                    <div answer="1" answer1="2*sqrt(30)">
+                        В правильной треугольной пирамиде <TEX>MABC</TEX> с
+                        основанием <TEX>ABC</TEX> стороны
+                        основания равны 6, а боковые рёбра 8. 
+                        На ребре <TEX>AC</TEX> находится точка <TEX>D</TEX>,
+                        на ребре <TEX>AB</TEX> находится точка <TEX>E</TEX>,
+                        а на ребре <TEX>AM</TEX> &ndash; точка <TEX>L</TEX>.
+                        Известно, что <TEX>CD=BE=LM=2</TEX>.
+                        <br />Найдите площадь сечения пирамиды плоскостью,
+                        проходящей через точки <TEX>E,~D,~L</TEX>.
+                    </div>,
+                    <div answer="1" answer1="3">
+                        В правильном тетраэдре <TEX>ABCD</TEX> точки <TEX>K,~M</TEX> &ndash; середины 
+                        рёбер <TEX>AB,~CD</TEX> соответственно. 
+                        Плоскость <TEX>\alpha</TEX> содержит прямую <TEX>KM</TEX> и параллельна
+                        прямой <TEX>AD</TEX>.
+                        <br />Найдите площадь сечения тетраэдра <TEX>ABCD</TEX> плоскостью <TEX>\alpha</TEX>,
+                        если <TEX>{"AB=2\\sqrt{3}"}</TEX>.
+                    </div>,
+                    <div answer="1" answer1="8*sqrt(6)">
+                        Дана правильная четырехугольная призма <TEX>ABCDA_1B_1C_1D_1</TEX>.
+                        На ребре <TEX>AA_1</TEX> отмечена точка <TEX>K</TEX> так,
+                        что <TEX>AK=KA_1=1:2</TEX>.
+                        Плоскость <TEX>\alpha</TEX> проходит через 
+                        точки <TEX>B</TEX> и <TEX>K</TEX> параллельно прямой <TEX>AC</TEX>.
+                        Эта плоскость пересекает ребро <TEX>DD_1</TEX> в точке <TEX>M</TEX>.
+                        <br />Найдите площадь сечения, если <TEX>AB=4,~AA_1=6</TEX>.
+                    </div>,
+                    <div answer="1" answer1="44">
+                        В правильной треугольной пирамиде <TEX>SABC</TEX> сторона
+                        основания <TEX>AB</TEX> равна 12, 
+                        а боковое ребро <TEX>SA</TEX> равно 13.
+                        Точки <TEX>M</TEX> и <TEX>N</TEX> &ndash; середины
+                        рёбер <TEX>SA</TEX> и <TEX>SB</TEX> соответственно.
+                        Плоскость <TEX>\alpha</TEX> содержит прямую <TEX>MN</TEX> и
+                        перпендикулярна плоскости основания пирамиды. <br />
+                        Найдите площадь многоугольника, являющегося сечением 
+                        пирамиды <TEX>SABC</TEX> плоскостью <TEX>\alpha</TEX>.
+                    </div>,
                 ]
             },
             4: {
                 name: "Объём пирамиды",
                 tasks: [
-                    <div answer="1">
-                                Ответ 1.
-                            </div>
+                    <div answer="1" answer1="18">
+                        Ребро куба <TEX>ABCDA_1B_1C_1D_1</TEX> равно 6.
+                        Точки <TEX>K,~L,~M</TEX> &ndash; центры 
+                        граней <TEX>ABCD,~AA_1D_1D</TEX> и <TEX>CC_1D_1D</TEX> соответственно.
+                        <br />Найдите объём <TEX>B_1KLM</TEX>.
+                    </div>,
+                    <div answer="1" answer1="18*sqrt(3)">
+                        В правильной треугольной призме <TEX>ABCA_1B_1C_1</TEX> все рёбра равны 6.
+                        На рёбрах <TEX>AA_1</TEX> и <TEX>CC_1</TEX> отмечены
+                        точки <TEX>M</TEX> и <TEX>N</TEX> соответственно, 
+                        причём <TEX>AM=2,~CN=1</TEX>. <br />
+                        Найдите объём тетраэдра <TEX>MNBB_1</TEX>.
+                    </div>,
+                    <div answer="1" answer1="9*sqrt(11)/7">
+                        В правильной шестиугольной пирамиде <TEX>SABCDEF</TEX> сторона 
+                        основания <TEX>AB=4</TEX>, а боковое ребро <TEX>SA=7</TEX>. 
+                        Точка <TEX>M</TEX> лежит на ребре <TEX>BC</TEX>, 
+                        причем <TEX>BM=1</TEX>, точка <TEX>K</TEX> лежит на 
+                        ребре <TEX>SC</TEX>, причем <TEX>SK=4</TEX>.
+                        <br />Найдите объем пирамиды <TEX>CDKM</TEX>.
+                    </div>,
+                    <div answer="1" answer1="80*sqrt(3)">
+                        Дана правильная треугольная пирамида <TEX>SABC</TEX>, 
+                        сторона основания <TEX>AB=16</TEX>, 
+                        высота <TEX>SH=10</TEX>, точка <TEX>K</TEX> &ndash; середина <TEX>AS</TEX>. 
+                        Плоскость, проходящая
+                        через точку <TEX>K</TEX> и параллельная основанию пирамиды, 
+                        пересекает ребра <TEX>SB</TEX> и <TEX>SC</TEX> в точках <TEX>Q</TEX> и <TEX>P</TEX> соответственно.
+                        <br />Найдите объем пирамиды <TEX>KBQPC</TEX>.
+                    </div>,
+                    <div answer="1" answer1="20*sqrt(14)">
+                        Основанием прямой треугольной призмы <TEX>ABCA_1B_1C_1</TEX> является 
+                        прямоугольный треугольник <TEX>ABC</TEX> с прямым углом <TEX>C</TEX>. 
+                        Диагонали боковых граней <TEX>AA_1B_1B</TEX> и <TEX>BB_1C_1C</TEX> равны 15 и 9 
+                        соответственно, <TEX>AB=13</TEX>.
+                        <br />Найдите объём пирамиды <TEX>AA_1C_1B</TEX>.
+                    </div>,
                 ]
             },
         },
