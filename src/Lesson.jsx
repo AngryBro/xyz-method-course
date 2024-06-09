@@ -61,7 +61,6 @@ export const Lesson = ({localData}) => {
                 count += Object.keys((DATA[th][subth])).length - 1
             }
         }
-        console.log(count, slidesAll.length)
         return slidesAll[count + Number(lesson - 1)]
     }
 
@@ -76,14 +75,13 @@ export const Lesson = ({localData}) => {
         <div className="lesson-conspect">
             <iframe width={"100%"} height={playerWidth * 720/1280} src={slides()} title="Slides"></iframe>
         </div>
-        <div>{data.material}</div>
-        <div className="lesson-title">Задач{oneTask?"а":"и"}</div>
+        <div className="lesson-material">{data.material}</div>
+        <div className={`lesson-title ${unlockedTask(0) ? "" : "__locked"}`}>Задач{oneTask?"а":"и"}</div>
         <div className="lesson-tasks">
             {
                 data.tasks.map((task, i) =>
                     <div key={i} className="lesson-task-container">
-                        <div hidden={oneTask} className="lesson-task-number">{i+1}.</div>
-                        <Task locked={!unlockedTask(i)} correct={displayAnswer(i) ? task.props.answer : false} onChange={e => check(e, task)}>
+                        <Task number={oneTask?undefined:i + 1} locked={!unlockedTask(i)} correct={displayAnswer(i) ? task.props.answer : false} onChange={e => check(e, task)}>
                             {task}
                         </Task>
                     </div>

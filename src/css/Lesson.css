@@ -10,6 +10,10 @@
     margin-bottom: 50px;
     margin-top: 50px;
 }
+.lesson-title.__locked {
+    cursor: not-allowed;
+    background-color: grey;
+}
 .lesson-tasks {
     font-size: 25pt;
 }
@@ -39,4 +43,8 @@
 }
 .lesson-conspect {
     font-size: 20pt;
+}
+.lesson-material {
+    /* border-radius: 10px; */
+    /* border: 5px solid black; */
 }

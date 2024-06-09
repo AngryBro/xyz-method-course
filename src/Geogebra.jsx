@@ -35,7 +35,7 @@ export const Geogebra = ({name}) => {
     }, [ref])
 
     return <div ref={ref}>
-        <iframe width={"100%"} height={`${height}px`} title="geogebramodel" src={`data:text/html, ${Models[name]}`} frameborder="0"></iframe>
+        <iframe width={"100%"} height={`${height}px`} title="geogebramodel" src={`data:text/html, ${Models[name]}`}></iframe>
     </div>
 }
 

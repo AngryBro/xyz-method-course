@@ -1,11 +1,19 @@
+.task-container {
+    display: flex;
+    --locked-opacity: 0.3;
+}
+.task-container.__locked {
+    opacity: var(--locked-opacity);
+    cursor: not-allowed;
+    user-select: none;
+}
 .task-locked {
     transition: all 0.3s ease;
     opacity: 1;
 }
-.task-locked.__locked {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 .task-answer {
     margin-top: 20px;
+}
+.task-number {
+    margin-right: 10px;
 }
