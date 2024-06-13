@@ -21,6 +21,7 @@ export const Theme = ({localData, tasksDone}) => {
 
 
     const nav = useNavigate()
+
     
     return <div>
         <Title>Тема {theme}. {DATA[theme].name}</Title>
@@ -34,7 +35,7 @@ export const Theme = ({localData, tasksDone}) => {
                         <Level progress={tasksDone(theme, subTheme).progress} locked={localData.greater(theme, subTheme, 1, 0) === -1} name={`${subTheme}. ${DATA[theme][subTheme].name}`}>
                             {
                                 subKeys(DATA[theme][subTheme]).map(lesson =>
-                                    <SubLevel onClick={() => nav(`/lesson/${theme}.${subTheme}.${lesson}`)} locked={localData.greater(theme, subTheme, lesson, 0) === -1} done={localData.nextLesson(theme, subTheme, lesson) !== undefined ? localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson)) : false} key={lesson}>{subTheme}.{lesson}. {DATA[theme][subTheme][lesson].name}</SubLevel>    
+                                    <SubLevel onClick={() => nav(`/lesson/${theme}.${subTheme}.${lesson}`)} locked={localData.greater(theme, subTheme, lesson, 0) === -1} done={localData.nextLesson(theme, subTheme, lesson) !== undefined ? localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson)) : localData.finished} key={lesson}>{subTheme}.{lesson}. {DATA[theme][subTheme][lesson].name}</SubLevel>    
                                 )
                             }
                         </Level>

@@ -27,17 +27,161 @@ export const Lesson = ({localData}) => {
 
 
     const check = (e, task) => {
-        const standardizeOperators = raw => {
-            return raw.replace(/sqrt/g, "Math.sqrt")
-                    .replace(/:/g, "/")
+        const TYPES = {
+            NUMBER: "number",
+            EQUATION: "equation",
+            VECTOR: "vector"
         }
-        if(standardizeOperators(e.target.value) === standardizeOperators(task.props.answer)) {
-            let finished = localData.next()
-            if(finished) {
-                setTimeout(() => nav("/"), 1000)
+        const answerType = (ans) => {
+            for(let i = 0; i < ans.length; i++) {
+                if("xyz".includes(ans[i])) {
+                    return TYPES.EQUATION
+                }
+            }
+            if("({".includes(ans[0]) && "})".includes(ans[ans.length - 1])) {
+                return TYPES.VECTOR
+            }
+            return TYPES.NUMBER
+        }
+        const action = (correct) => {
+            if(correct) {
+                let finished = localData.next()
+                if(finished) {
+                    setTimeout(() => {
+                        // nav("/")
+                    }, 3000)
+                }
             }
         }
+        const checkNumber = (ans, correctAns) => {
+            const standardizeOperators = raw => {
+                raw = raw.replace(/ /g, "")
+                const digits = "0123456789,."
+                let sqrt = ""
+                let flag = false
+                for(let i = 0; i < raw.length; i++) {
+                    if(raw[i] === "√" && i < raw.length - 1 && raw[i + 1] !== "(") {
+                        sqrt += (i > 0 && digits.includes(raw[i - 1]) ? "*" : "") + "√("
+                        flag = true
+                    }
+                    else if(i > 0 && raw[i] === "√" && digits.includes(raw[i - 1])) {
+                        sqrt += "*√"
+                    }
+                    else if(!digits.includes(raw[i]) && flag) {
+                        sqrt += `)${raw[i]}`
+                        flag = false
+                    }
+                    else {
+                        sqrt += raw[i]
+                    }
+                }
+                if(flag) {
+                    sqrt += ")"
+                }
+                return sqrt.replace(/sqrt|√/g, "Math.sqrt")
+                        .replace(/:/g, "/")
+                        .replace(/arcsin/g, "Math.asin")
+                        .replace(/arccos/g, "Math.acos")
+                        .replace(/arctg/g, "Math.atan")
+                        .replace(/,/g, ".")
+                        .replace(/pi/g, "Math.PI")
+            }
+            ans = standardizeOperators(ans)
+            correctAns = standardizeOperators(correctAns)
+            console.log(ans, correctAns)
+            let evalAns, evalCorrect
+            try {
+                // eslint-disable-next-line
+                evalAns = eval(ans)
+            }
+            catch(error) {
+                evalAns = 0
+            }
+            try {
+                // eslint-disable-next-line
+                evalCorrect = eval(correctAns)
+            }
+            catch(error) {
+                evalCorrect = 1
+            }
+            return Math.round(evalAns * 1000) === Math.round(evalCorrect * 1000)
+        }
+        const checkVector = (ans, correctAns) => {
+            const normalize = vec => {
+                vec = vec.replace(/\{|\}/g, "").replace(/\./g, ",").trim()
+                if(vec[0] === "(") {
+                    vec = vec.slice(1)
+                }
+                if(vec[vec.length - 1] === ")" && vec.split(")").length !== vec.split("(").length) {
+                    vec = vec.slice(0, -1)
+                }
+                return vec.split(vec.includes(";") ? ";" : " ").filter(e => e.length > 0)
+            }
+            ans = normalize(ans)
+            correctAns = normalize(correctAns)
+            if(ans.length !== correctAns.length) {
+                return false
+            }
+            for(let i = 0; i < ans.length; i++) {
+                if(!checkNumber(ans[i], correctAns[i])) {
+                    console.log(ans[i], correctAns[i])
+                    return false
+                }
+            }
+            return true
+        }
+
+        const checkEquation = (ans, correctAns) => {
+            const normalize = eq => {
+                eq = eq.split("=")[0].replace(/ /g, "").trim()
+                const beforeVar = (eq, vr) => {
+                    const digits = "0123456789"
+                    const i = eq.indexOf(vr)
+                    if(i > 0 && digits.includes(eq[i - 1])) {
+                        eq = eq.replace(vr, `*${vr}`)
+                    }
+                    return eq.replace(vr, `(${vr})`)
+                }
+                for(let i = 0; i < 3; i++) {
+                    eq = beforeVar(eq, "xyz"[i])
+                }
+                return eq
+            }
+            ans = normalize(ans)
+            correctAns = normalize(correctAns)
+            for(let x = -5; x <= 5; x++) {
+                for(let y = -5; y <= 5; y++) {
+                    for(let z = -5; z <= 5; z++) {
+                        const left = ans.replace("x", x)
+                                    .replace("y", y)
+                                    .replace("z", z)
+                        const leftCorrect = correctAns.replace("x", x)
+                                    .replace("y", y)
+                                    .replace("z", z)
+                        if(!checkNumber(left, leftCorrect)) {
+                            return false
+                        }
+                    }
+                }
+            }
+            return true
+        }
+
+        const checkDifferentTypes = (ans, correctAns) => {
+            const type = answerType(correctAns)
+            switch(type) {
+                case TYPES.NUMBER: return checkNumber(ans, correctAns)
+                case TYPES.VECTOR: return checkVector(ans, correctAns)
+                case TYPES.EQUATION: return checkEquation(ans, correctAns)
+                default: return false
+            }
+        }
+
+        const correctAns = task.props.answer
+        const ans = e.target.value
+        action(checkDifferentTypes(ans, correctAns))
     }
+
 
     const displayAnswer = (i) => {
         return (localData.nextLesson(theme, subTheme, lesson) !== undefined && localData.unlockedLesson(localData.nextLesson(theme, subTheme, lesson))) ||
@@ -52,6 +196,8 @@ export const Lesson = ({localData}) => {
     
     const oneTask = DATA[theme][subTheme][lesson].tasks.length === 1
 
+    const last = localData.nextLesson(theme, subTheme, lesson) === undefined
+
     const slides = () => {
         let count = 0
         const maxSubTheme = 20
@@ -62,6 +208,18 @@ export const Lesson = ({localData}) => {
             }
         }
         return slidesAll[count + Number(lesson - 1)]
+    }
+
+    const handleNext = () => {
+        if(last) {
+            nav("/")
+        }
+        else {
+            nav(`/lesson/${localData.nextLesson(theme, subTheme, lesson)}`)
+            if(!localData.finished) {
+                window.scrollTo({top:0, behavior:"smooth"})
+            }
+        }
     }
 
     return <div ref={container}>
@@ -88,8 +246,12 @@ export const Lesson = ({localData}) => {
                 )
             }
         </div>
-        <div hidden={nextHidden} className="lesson-next-container">
-            <div hidden={nextHidden} className="lesson-next" onClick={() => nav(`/lesson/${localData.nextLesson(theme, subTheme, lesson)}`)}>Далее</div>
+        <div className="lesson-next-container">
+            <div className={`lesson-next ${nextHidden ? "__hidden":""}`} onClick={handleNext}>Далее</div>
+            <div className={`lesson-next ${!last ? "__hidden":""}`} onClick={handleNext}>На главную</div>
+        </div>
+        <div className="lesson-router-container">
+            <Router path={{theme, subTheme, lesson}} />
         </div>
     </div>
 }

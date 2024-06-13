@@ -23,7 +23,7 @@ export const Answer = ({onChange, correct, disabled}) => {
     return <div className="answer-container">
         <div className="answer-text">Ответ:</div>
         <div className="answer-input">
-            <input disabled={disabled} onFocus={() => setResultDisplay(false)} onBlur={handleBlur} onKeyDown={keyDownHandler} value={correct?correct:value} onChange={e => setValue(e.target.value.trim())} />
+            <input disabled={disabled} onFocus={() => setResultDisplay(false)} onBlur={handleBlur} onKeyDown={keyDownHandler} value={correct?correct:value} onChange={e => setValue(e.target.value)} />
         </div>
         <div className={`answer-correct ${!resultDisplay || value === "" ? "__hidden": ""}`}>{correct?"Верно":"Не верно"}</div>
     </div>

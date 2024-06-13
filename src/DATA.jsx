@@ -19,11 +19,11 @@ export const DATA = {
             2: {
                 name: "Точка на отрезке",
                 tasks: [
-                    <div answer="-2 -2 -5" answer1="1">
+                    <div answer="(-2; -2; -5)" answer1="1">
                         <div>Найдите координаты середины отрезка <TEX>{"AB"}</TEX>,</div>
                         <div>если <TEX>{"A(3;-10;-3),~B(-7;6;-7)"}</TEX>.</div>
                     </div>,
-                    <div answer="-3 -2 -1" answer1="1">
+                    <div answer="(-3; -2; -1)" answer1="1">
                         <div>
                             Дана точка <TEX>{"A(1;2;3)"}</TEX>. Точка <TEX>{"B(-1;0;1)~"}</TEX> 
                             является серединой отрезка <TEX>{"AC"}</TEX>.
@@ -32,12 +32,12 @@ export const DATA = {
                             Найдите координаты точки <TEX>{"C"}</TEX>.
                         </div>
                     </div>,
-                    <div answer="4 -3 1" answer1="1">
+                    <div answer="(4; -3; 1)" answer1="1">
                         <div>Дан отрезок <TEX>{"AB"}</TEX> с концами <TEX>{"A(4;0;4),~B(4;-5;-1)"}</TEX>.</div>
                         <div>На отрезке выбрана точка <TEX>{"C"}</TEX> так, что <TEX>{"AC:CB=3:2"}</TEX>.</div>
                         <div>Найдите координаты точки <TEX>{"C"}</TEX>.</div>
                     </div>,
-                    <div answer="-1 3 2" answer1="1">
+                    <div answer="(-1; 3; 2)" answer1="1">
                         <div>Даны точки <TEX>{"A(5;0;-4),~B(1;2;0)"}</TEX>. <TEX>{"AB = 10"}</TEX> .</div>
                         <div>Отрезок <TEX>{"AB"}</TEX> продлили за точку <TEX>{"B"}</TEX> на <TEX>{"BC=5"}</TEX>. </div>
                         <div>Найдите координаты точки <TEX>{"C"}</TEX>.</div>
@@ -51,7 +51,7 @@ export const DATA = {
             1: {
                 name: "Координаты вектора",
                 tasks: [
-                    <div answer="-6 -2 4" answer1="1">
+                    <div answer="{-6; -2; 4}" answer1="1">
                         <div>
                             Даны точки <TEX>{"A(4;2;-1)"}</TEX> и <TEX>{"B(-2; 0; 3)"}</TEX>.                            
                         </div>
@@ -59,7 +59,7 @@ export const DATA = {
                             Найдите координаты вектора <TEX>{"\\vec{AB}"}</TEX>.
                         </div>
                     </div>,
-                    <div answer="1 6 -1" answer1="1">
+                    <div answer="(1; 6; -1)" answer1="1">
                         <div>
                             Дан вектор <TEX>{"\\vec{AB}\\{-4;5;-1\\}~"}</TEX>
                             с началом в точке <TEX>{"A(5;1;0)"}</TEX>.
@@ -73,7 +73,7 @@ export const DATA = {
             2: {
                 name: "Действия с векторами",
                 tasks: [
-                    <div answer="-2 -3 5">
+                    <div answer="{-2; -3; 5}">
                         <div>
                             Даны векторы <TEX>{"\\vec{a}\\{ 0;-3;4 \\},~\\vec{b}\\{-2;0;1\\}"}</TEX>.
                         </div>
@@ -81,7 +81,7 @@ export const DATA = {
                             Найдите координаты вектора <TEX>{"\\vec{a} + \\vec{b}"}</TEX>.
                         </div>
                     </div>,
-                    <div answer="2 -3 3">
+                    <div answer="{2; -3; 3}">
                         <div>
                             Даны те же векторы, что и в задании 1.
                         </div>
@@ -89,7 +89,7 @@ export const DATA = {
                             Найдите координаты вектора <TEX>{"\\vec{a} - \\vec{b}"}</TEX>.
                         </div>
                     </div>,
-                    <div answer="6 -6 5">
+                    <div answer="{6; -6; 5}">
                         <div>
                             Даны те же векторы, что и в задании 1.
                         </div>
@@ -109,7 +109,7 @@ export const DATA = {
                         <div>1. <TEX>{"\\vec{a} \\parallel \\vec{b}"}</TEX></div>
                         <div>2. <TEX>{"\\vec{a} \\not\\parallel \\vec{b}"}</TEX>.</div>
                     </div>,
-                    <div answer="3 0 -1">
+                    <div answer="{3; 0; -1}">
                         <div>
                             Дан вектор <TEX>{"\\vec{a}\\{21;0;-7\\}"}</TEX>.
                             Найдите координаты вектора, параллельного данному,
@@ -200,7 +200,7 @@ export const DATA = {
             2: {
                 name: "Уравнения прямой",
                 tasks: [
-                    <div answer="2 -1 2">
+                    <div answer="(2; -1; 2)">
                         <div>
                             Прямая <TEX>{"a"}</TEX> задана точкой <TEX>{"A(0;3;-4)~"}</TEX>
                             и направляющим вектором <TEX>{"\\vec{a}\\{1;-2;3\\}"}</TEX>.
@@ -225,7 +225,7 @@ export const DATA = {
             1: {
                 name: "Нормальный вектор",
                 tasks: [
-                    <div answer="7 6 6">
+                    <div answer="{7; 6; 6}">
                         <div>Даны векторы: <TEX>{"\\vec{a}\\left\\{6;2;-9\\right\\},~\\vec{b}\\{6;-8;1\\}"}</TEX>.</div>
                         <div>Найдите нормальный вектор плоскости <TEX>{"\\alpha:~\\alpha \\parallel \\vec{a},\\vec{b}"}</TEX>.</div>
                         <div className="i">Примечание:
@@ -234,17 +234,17 @@ export const DATA = {
                             координата должна быть неотрицательной.
                         </div>
                     </div>,
-                    <div answer="1 1 1">
+                    <div answer="{1; 1; 1}">
                         <div>Даны векторы: <TEX>{"\\vec{a}\\left\\{-\\frac{5}{3};\\frac{1}{3};\\frac{4}{3}\\right\\},~\\vec{b}\\{-8;1;7\\}"}</TEX>.</div>
                         <div>Найдите нормальный вектор плоскости <TEX>{"\\alpha:~\\alpha \\parallel \\vec{a},\\vec{b}"}</TEX>.</div>
                         <div className="i">Примечание: используйте <TEX>{"3\\vec{a}"}</TEX> вместо <TEX>{"\\vec{a}"}</TEX>.</div>
                     </div>,
-                    <div answer="1 -1 0">
+                    <div answer="{1; -1; 0}">
                         <div>Плоскость <TEX>{"(ABC)"}</TEX> содержит точки:</div>
                         <div><TEX>{"A(5;2;3),~B(-2;-5;-4),~C(0;-3;0)"}</TEX>.</div>
                         <div>Найдите нормальный вектор <TEX>{"(ABC)~"}</TEX>.</div>
                     </div>,
-                    <div answer="3 -4 6">
+                    <div answer="{3; -4; 6}">
                         <div>Плоскость <TEX>{"(ABC)"}</TEX> содержит точки:</div>
                         <div><TEX>{"A(2;-1;5),~B(4;-4;2),~C(2;2;7)"}</TEX>.</div>
                         <div>Найдите <TEX>{"\\vec{n}_{(ABC)}"}</TEX>.</div>
@@ -254,7 +254,7 @@ export const DATA = {
             2: {
                 name: "Уравнение плоскости",
                 tasks: [
-                    <div answer="2x+y-5z-1=0">
+                    <div answer="2x + y - 5z - 1 = 0">
                         <div>
                             Плоскость <TEX>{"\\alpha"}</TEX> содержит точку <TEX>{"A(10;6;5)~"}</TEX>
                             и перпендикулярна вектору <TEX>{"\\vec{n}\\{2;1;-5\\}"}</TEX>.
@@ -263,16 +263,16 @@ export const DATA = {
                             Найдите уравнение уравнение плоскости <TEX>\alpha</TEX>.
                         </div>
                     </div>,
-                    <div answer="3x-9y-8z-22=0">
+                    <div answer="3x - 9y - 8z - 22 = 0">
                         <div>
                             Плоскость <TEX>\alpha</TEX> содержит точку <TEX>A(-7;-3;2)</TEX> и
                             параллельна векторам <TEX>{"\\vec{a}\\{-3;-9;9\\},~\\vec{b}\\{5;-1;3\\}"}</TEX>.
                         </div>
                         <div>
-                            Найдите уравнение плоскости <TEX>\\alpha</TEX>.
+                            Найдите уравнение плоскости <TEX>\alpha</TEX>.
                         </div>
                     </div>,
-                    <div answer="6x-y-8z+17=0">
+                    <div answer="6x - y - 8z + 17 = 0">
                         <div>
                             Даны точки: <TEX>A(-4;3;-1),~B(-4;-5;0),~C(-5;-3;-1)</TEX>.
                         </div>
@@ -280,7 +280,7 @@ export const DATA = {
                             Найдите уравнение плоскости <TEX>(ABC)</TEX>.
                         </div>
                     </div>,
-                    <div answer="-15 -7 6">
+                    <div answer="(-15; -7; 6)">
                         <div>Даны точки: <TEX>{"A(2;2;4),~B(8;4;-2),~C(9;5;0)"}</TEX></div>
                         <div><TEX>{"D(-1;0;6),~E(1;1;6)"}</TEX>.</div>
                         <div>Составьте уравнения прямой <TEX>{"DE"}</TEX> и плоскости <TEX>{"(ABC)"}</TEX>.</div>
@@ -388,6 +388,11 @@ export const DATA = {
             3: {
                 name: "Расстояние от точки до плоскости",
                 tasks: [
+                    <div answer="1">
+                        <div>Дано уравнение плоскости <TEX>{"\\alpha:~~3x-6y-2z+3=0"}</TEX></div>
+                        <div>и точка <TEX>A(2;3;-1)</TEX>.</div>
+                        <div>Найдите <TEX>{"\\rho(A,\\alpha)"}</TEX>.</div>
+                    </div>,
                     <div answer="0">
                         <div>Даны точки <TEX>{"A(3;-4;-2),~B(3;0;-1),~C(-4;-4;-5),~D(-4;4;-3)"}</TEX>.</div>
                         <div>Найдите <TEX>{"\\rho(A,(BCD))"}</TEX>.</div>
@@ -402,7 +407,7 @@ export const DATA = {
             4: {
                 name: "Расстояние от прямой до плоскости",
                 tasks: [
-                    <div answer="3.2">
+                    <div answer="3,2">
                         <div>
                             Дана плоскость <TEX>{"(ABC):~A(-3;4;-4),~B(-1;4;-4),~C(-1;1;0)~"}</TEX>
                             и прямая <TEX>{"DE \\parallel (ABC):~D(3;-3;0),~E(5;-6;4)"}</TEX>.
@@ -414,7 +419,7 @@ export const DATA = {
             5: {
                 name: "Расстояние между плоскостями",
                 tasks: [
-                    <div answer="0.6">
+                    <div answer="0,6">
                         <div>
                             Даны точки <TEX>{"A(-1;-2;-3),~B(3;-3;0),~C(-1;4;-3)"}</TEX>.
                         </div>
@@ -429,9 +434,9 @@ export const DATA = {
                 name: "Расстояние между прямыми",
                 tasks: [
                     <div answer="3">
-                        <div>Прямая <TEX>{"a"}</TEX> проходит через точки <TEX>{"A(-3;-5;1)~"}</TEX>
-                            и <TEX>{"B(-3;3;-1)"}</TEX>. Прямая <TEX>{"b"}</TEX> проходит через точки
-                            <TEX>{"C(0;-1;0)~"}</TEX> и <TEX>{"D(0;-9;2)"}</TEX>.
+                        <div>Прямая <TEX>{"a"}</TEX> проходит через 
+                            точки <TEX>{"A(-3;-5;1)~"}</TEX> и <TEX>{"B(-3;3;-1)"}</TEX>. Прямая <TEX>{"b"}</TEX> проходит через
+                            точки <TEX>{"C(0;-1;0)~"}</TEX> и <TEX>{"D(0;-9;2)"}</TEX>.
                         </div>
                         <div>Найдите <TEX>{"\\rho(a,b)"}</TEX>.</div>
                     </div>,
@@ -453,7 +458,7 @@ export const DATA = {
             1: {
                 name: "Прямоугольный параллелепипед",
                 tasks: [
-                    <div answer="1/2 1/2 1/2">
+                    <div answer="(1/2; 1/2; 1/2)">
                         Найдите координаты центра единичного куба.
                     </div>
                 ],
@@ -462,7 +467,7 @@ export const DATA = {
             2: {
                 name: "Правильная четырёхугольная пирамида",
                 tasks: [
-                    <div answer="0 0 1/sqrt(2)">
+                    <div answer="(0; 0; 1/√2)">
                         Найдите координаты вершины <TEX>P</TEX> в правильной четырёхугольной
                         пирамиде, все рёбра которой равны 1.
                     </div>
@@ -475,7 +480,7 @@ export const DATA = {
             1: {
                 name: "Правильная треугольная призма",
                 tasks: [
-                    <div answer="0 sqrt(3)/2 1">
+                    <div answer="(0; √3/2; 1)">
                         Найдите координаты точки <TEX>C_1</TEX> в правильной треугольной
                         призме, у которой все рёбра равны 1.
                     </div>
@@ -485,7 +490,7 @@ export const DATA = {
             2: {
                 name: "Правильная треугольная пирамида",
                 tasks: [
-                    <div answer="0 sqrt(3)/6 sqrt(2/3)">
+                    <div answer="(0; √3/6; sqrt(2/3))">
                         Найдите координаты вершины <TEX>P</TEX> единичном правильном тетраэдре.
                     </div>
                 ],
@@ -497,7 +502,7 @@ export const DATA = {
             1: {
                 name: "Правильная шестиугольная призма",
                 tasks: [
-                    <div answer="-1/2 sqrt(3)/2 1">
+                    <div answer="(-1/2; √3/2; 1)">
                         Найдите координаты точки <TEX>C_1</TEX> в правильной шестиугольной
                         призме, у которой все рёбра равны 1.
                     </div>
@@ -507,7 +512,7 @@ export const DATA = {
             2: {
                 name: "Правильная шестиугольная пирамида",
                 tasks: [
-                    <div answer="0 0 sqrt(3)">
+                    <div answer="(0; 0; √3)">
                         Найдите координаты вершины <TEX>P</TEX> в правильной шестиугольной
                         пирамиде, стороны основания которой равны 1, а боковые рёбра 2.
                     </div>
@@ -520,7 +525,7 @@ export const DATA = {
             1: {
                 name: "Конус",
                 tasks: [
-                    <div answer="sqrt(3)/2 1/2 0">
+                    <div answer="(√3/2; 1/2; 0)">
                             В конусе с радиусом основния 1 найдите координаты
                             точки <TEX>C</TEX>, где <TEX>{"C \\in \\overset{\\smile}{AB},~\\overset{\\smile}{AC} = 30^{\\circ}"}</TEX>
                         </div>
@@ -545,7 +550,7 @@ export const DATA = {
             3: {
                 name: "Шар",
                 tasks: [
-                    <div answer="">
+                    <div answer="1/2">
                         <div>
                             На единичной сфере отмечена точка <TEX>{"X\\left(?;\\frac{2}{3};\\frac{\\sqrt{11}}{6}\\right)"}</TEX>.
                         </div>
@@ -568,7 +573,7 @@ export const DATA = {
                          а сторона основания равна <TEX>{"3\\sqrt{3}"}</TEX>.<br /> 
                          Найдите высоту пирамиды.       
                     </div>,
-                    <div answer="sqrt(11)">
+                    <div answer="√11">
                         Длина диагонали куба <TEX>ABCDA_1B_1C_1D_1</TEX> равна 3.
                         На луче <TEX>A_1C</TEX>отмечена точка <TEX>P</TEX> так, что <TEX>A_1P = 4</TEX>.
                         <br /> Найдите длину отрезка <TEX>AP</TEX>. 
@@ -644,7 +649,7 @@ export const DATA = {
                         которой равны 3, найдите угол между
                         прямыми <TEX>AA_1</TEX> и <TEX>BC_1</TEX>. 
                     </div>,
-                    <div answer="3/sqrt(26)">
+                    <div answer="3/√26">
                         В кубе <TEX>ABCDA_1B_1C_1D_1</TEX> все рёбра равны 4. На его
                         ребре <TEX>BB_1</TEX> отмечена
                         точка <TEX>K</TEX> так, что <TEX>KB=3</TEX>.
@@ -654,7 +659,7 @@ export const DATA = {
                         Найдите косинус угла между
                         плоскостями <TEX>\alpha</TEX> и <TEX>(BCC_1)</TEX>.
                     </div>,
-                    <div answer="3*sqrt(30)/5">
+                    <div answer="3√30 / 5">
                         В правильной треугольной призме <TEX>ABCA_1B_1C_1</TEX> сторона <TEX>AB</TEX> основания
                         равна 12, а высота призмы равна 2. На рёбрах <TEX>B_1C_1</TEX> и <TEX>AB</TEX> отмечены
                         точки <TEX>P</TEX> и <TEX>Q</TEX> соответственно, причём <TEX>PC_1=3</TEX>, а <TEX>AQ=4</TEX>.
@@ -697,7 +702,7 @@ export const DATA = {
                         <br />Найдите площадь сечения, проходящего 
                         через точки <TEX>A_1,~D_1,~K</TEX>.     
                     </div>,
-                    <div answer="2*sqrt(30)">
+                    <div answer="2√30">
                         В правильной треугольной пирамиде <TEX>MABC</TEX> с
                         основанием <TEX>ABC</TEX> стороны
                         основания равны 6, а боковые рёбра 8. 
@@ -716,7 +721,7 @@ export const DATA = {
                         <br />Найдите площадь сечения тетраэдра <TEX>ABCD</TEX> плоскостью <TEX>\alpha</TEX>,
                         если <TEX>{"AB=2\\sqrt{3}"}</TEX>.
                     </div>,
-                    <div answer="8*sqrt(6)">
+                    <div answer="8√6">
                         Дана правильная четырехугольная призма <TEX>ABCDA_1B_1C_1D_1</TEX>.
                         На ребре <TEX>AA_1</TEX> отмечена точка <TEX>K</TEX> так,
                         что <TEX>AK=KA_1=1:2</TEX>.
@@ -747,14 +752,14 @@ export const DATA = {
                         граней <TEX>ABCD,~AA_1D_1D</TEX> и <TEX>CC_1D_1D</TEX> соответственно.
                         <br />Найдите объём <TEX>B_1KLM</TEX>.
                     </div>,
-                    <div answer="18*sqrt(3)">
+                    <div answer="18√3">
                         В правильной треугольной призме <TEX>ABCA_1B_1C_1</TEX> все рёбра равны 6.
                         На рёбрах <TEX>AA_1</TEX> и <TEX>CC_1</TEX> отмечены
                         точки <TEX>M</TEX> и <TEX>N</TEX> соответственно, 
                         причём <TEX>AM=2,~CN=1</TEX>. <br />
                         Найдите объём тетраэдра <TEX>MNBB_1</TEX>.
                     </div>,
-                    <div answer="9*sqrt(11)/7">
+                    <div answer="9√11 / 7">
                         В правильной шестиугольной пирамиде <TEX>SABCDEF</TEX> сторона 
                         основания <TEX>AB=4</TEX>, а боковое ребро <TEX>SA=7</TEX>. 
                         Точка <TEX>M</TEX> лежит на ребре <TEX>BC</TEX>, 
@@ -762,7 +767,7 @@ export const DATA = {
                         ребре <TEX>SC</TEX>, причем <TEX>SK=4</TEX>.
                         <br />Найдите объем пирамиды <TEX>CDKM</TEX>.
                     </div>,
-                    <div answer="80*sqrt(3)">
+                    <div answer="80√3">
                         Дана правильная треугольная пирамида <TEX>SABC</TEX>, 
                         сторона основания <TEX>AB=16</TEX>, 
                         высота <TEX>SH=10</TEX>, точка <TEX>K</TEX> &ndash; середина <TEX>AS</TEX>. 
@@ -771,7 +776,7 @@ export const DATA = {
                         пересекает ребра <TEX>SB</TEX> и <TEX>SC</TEX> в точках <TEX>Q</TEX> и <TEX>P</TEX> соответственно.
                         <br />Найдите объем пирамиды <TEX>KBQPC</TEX>.
                     </div>,
-                    <div answer="20*sqrt(14)">
+                    <div answer="20√14">
                         Основанием прямой треугольной призмы <TEX>ABCA_1B_1C_1</TEX> является 
                         прямоугольный треугольник <TEX>ABC</TEX> с прямым углом <TEX>C</TEX>. 
                         Диагонали боковых граней <TEX>AA_1B_1B</TEX> и <TEX>BB_1C_1C</TEX> равны 15 и 9 
