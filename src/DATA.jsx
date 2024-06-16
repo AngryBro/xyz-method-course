@@ -14,10 +14,12 @@ export const DATA = {
                         <div>Даны точки:  <TEX>{"A(1;~2;~3),~B(4;~5;~6),~C(7;~8;~9)"}</TEX>.</div>
                         <div>Найдите <TEX>{"A_x + B_y + C_z"}</TEX>.</div>
                     </div>
-                ]
+                ],
+                video: "https://drive.google.com/file/d/1aL88h2pnIiSJ8gP-y8y2Ci1eMImOAbAD/preview"
             },
             2: {
                 name: "Точка на отрезке",
+                video: "https://drive.google.com/file/d/19VW7N5Hvpfahr3jSy5kQfnM0-6No-0z0/preview",
                 tasks: [
                     <div answer="(-2; -2; -5)" answer1="1">
                         <div>Найдите координаты середины отрезка <TEX>{"AB"}</TEX>,</div>
@@ -49,7 +51,8 @@ export const DATA = {
             name: "Вектор",
             
             1: {
-                name: "Координаты вектора",
+                name: "Координаты вектора", //https://drive.google.com/file/d/1cDTNZAX1i_wRSv5p74Ssr0CRcbUsQwMc/view?usp=drive_link
+                video: "https://drive.google.com/file/d/1cDTNZAX1i_wRSv5p74Ssr0CRcbUsQwMc/preview",
                 tasks: [
                     <div answer="{-6; -2; 4}" answer1="1">
                         <div>
@@ -71,7 +74,8 @@ export const DATA = {
                 ]
             },
             2: {
-                name: "Действия с векторами",
+                name: "Действия с векторами",//https://drive.google.com/file/d/1jbcZNbj3nrNWXbWjyAms6tE4c6RWFbSZ/view?usp=drive_link
+                video: "https://drive.google.com/file/d/1jbcZNbj3nrNWXbWjyAms6tE4c6RWFbSZ/view?usp=drive_link",
                 tasks: [
                     <div answer="{-2; -3; 5}">
                         <div>
@@ -101,6 +105,8 @@ export const DATA = {
             },
             3: {
                 name: "Параллельность векторов",
+                foo: "https://drive.google.com/file/d/1NgUBP50OYFznzPD2Vowa8RpPIVGvrZVC/view?usp=drive_link",
+                video: "https://drive.google.com/file/d/1NgUBP50OYFznzPD2Vowa8RpPIVGvrZVC/preview",
                 tasks: [
                     <div answer="1">
                         <div>Даны векторы <TEX>{"\\vec{a}\\{-3;6;15\\}~"}</TEX>и 
@@ -120,6 +126,8 @@ export const DATA = {
             },
             4: {
                 name: "Скалярное произведение",
+                foo: "",
+                video: "https://drive.google.com/file/d/1jI89UrI4yVFCFPDGwng3qvsgxJkohuKs/view?usp=drive_link",
                 tasks: [
                     <div answer="-10">
                         <div>Дано <TEX>{"\\vec{a}\\{3;-4;-2\\},~\\vec{b}\\{-2;-1;4\\}"}</TEX>.</div>
@@ -133,6 +141,8 @@ export const DATA = {
             },
             5: {
                 name: "Длина вектора",
+                foo: "",
+                video: "https://drive.google.com/file/d/1RYVUNfpMzFOqp0qhFrUl9uEHZMm_rfPz/view?usp=drive_link",
                 tasks: [
                     <div answer="6">
                         <div>Дано <TEX>{"\\vec{a}\\{-4;-2;4\\}"}</TEX>.
@@ -146,6 +156,8 @@ export const DATA = {
             },
             6: {
                 name: "Угол между векторами",
+                foo: "",
+                video: "https://drive.google.com/file/d/1HMhE6U2-0StT9rKFLOs9Y-81V0GHVXIM/view?usp=drive_link",
                 tasks: [
                     <div answer="90">
                         <div>Дано <TEX>{"\\vec{a}\\{1;1;3\\},~\\vec{b}\\{-5;-1;2\\}"}</TEX>.</div>
@@ -179,6 +191,8 @@ export const DATA = {
             
             1: {
                 name: "Направляющий вектор",
+                foo: "",
+                video: "https://drive.google.com/file/d/1JNveIXDu9eX4ghPUhcVhCMShykTNzNPo/view?usp=drive_link",
                 tasks: [
                     <div answer="2">
                         <div>
@@ -199,6 +213,8 @@ export const DATA = {
             },
             2: {
                 name: "Уравнения прямой",
+                foo: "",
+                video: "https://drive.google.com/file/d/1ayn7e0r19bR6KSf28GHeGl4PkaVfP96s/view?usp=drive_link",
                 tasks: [
                     <div answer="(2; -1; 2)">
                         <div>
@@ -224,6 +240,7 @@ export const DATA = {
             
             1: {
                 name: "Нормальный вектор",
+                video: "https://drive.google.com/file/d/1bBufzXqsXPQ1AbNeCzFGwQV5K86Anv-6/view?usp=drive_link",
                 tasks: [
                     <div answer="{7; 6; 6}">
                         <div>Даны векторы: <TEX>{"\\vec{a}\\left\\{6;2;-9\\right\\},~\\vec{b}\\{6;-8;1\\}"}</TEX>.</div>
@@ -253,6 +270,8 @@ export const DATA = {
             },
             2: {
                 name: "Уравнение плоскости",
+                foo: "",
+                video: "https://drive.google.com/file/d/1nz_CESl1BxsATvcM-RxiyOIWSu2tN-56/view?usp=drive_link",
                 tasks: [
                     <div answer="2x + y - 5z - 1 = 0">
                         <div>
@@ -297,6 +316,8 @@ export const DATA = {
             name: "Углы",
             1: {
                 name: "Угол между прямыми",
+                foo: "",
+                video: "https://drive.google.com/file/d/1gLlpl1hYPTVgOkfnSSWo_zHpl4jrNT4E/view?usp=drive_link",
                 tasks: [
                         <div answer="90">
                             <div>
@@ -314,6 +335,8 @@ export const DATA = {
             },
             2: {
                 name: "Угол между прямой и плоскостью",
+                foo: "",
+                video: "https://drive.google.com/file/d/1DwURx_8Y9dK_4V2yMAQ1GOZ-2oGPCKef/view?usp=drive_link",
                 tasks: [
                     <div answer="0">
                         <div>
@@ -333,6 +356,8 @@ export const DATA = {
             },
             3: {
                 name: "Угол между плоскостями",
+                foo: "",
+                video: "https://drive.google.com/file/d/1dleMUbEQ_sh21rturaSDGdi2bv2vZCOL/view?usp=drive_link",
                 tasks: [
                     <div answer="90">
                         <div>
@@ -355,6 +380,8 @@ export const DATA = {
             name: "Расстояния",
             1: {
                 name: "Расстояние между точками",
+                foo: "",
+                video: "https://drive.google.com/file/d/11AvYazC6WazRfGK77usVXxh46OTSHhQX/view?usp=drive_link",
                 tasks: [
                     <div answer="2">
                         <div>Даны точки <TEX>{"A(2;1;4),~B(4;1;4)"}</TEX>.
@@ -370,6 +397,8 @@ export const DATA = {
             },
             2: {
                 name: "Расстояние от точки до прямой",
+                foo: "",
+                video: "https://drive.google.com/file/d/1BBcxKVEScqhdBXg-j38FfcWdrsboHolW/view?usp=drive_link",
                 tasks: [
                     <div answer="3">
                         Даны точки <TEX>{"A(-1;-3;-3),~B(-5;0;4),~C(1;-2;-1)"}</TEX>.
@@ -387,6 +416,8 @@ export const DATA = {
             },
             3: {
                 name: "Расстояние от точки до плоскости",
+                foo: "",
+                video: "https://drive.google.com/file/d/1leYzt5QDPZXR_Z7IveSudK1dA9VeZOXE/view?usp=drive_link",
                 tasks: [
                     <div answer="1">
                         <div>Дано уравнение плоскости <TEX>{"\\alpha:~~3x-6y-2z+3=0"}</TEX></div>
@@ -406,6 +437,8 @@ export const DATA = {
             },
             4: {
                 name: "Расстояние от прямой до плоскости",
+                foo: "",
+                video: "https://drive.google.com/file/d/1x58jwt722KFhnAHcOJ18WYwDymfswcYI/view?usp=drive_link",
                 tasks: [
                     <div answer="3,2">
                         <div>
@@ -418,6 +451,8 @@ export const DATA = {
             },
             5: {
                 name: "Расстояние между плоскостями",
+                foo: "",
+                video: "https://drive.google.com/file/d/1jO5_2rEOgLEvUHgSSLT_4zSEPoyZ9-GO/view?usp=drive_link",
                 tasks: [
                     <div answer="0,6">
                         <div>
@@ -432,6 +467,8 @@ export const DATA = {
             },
             6: {
                 name: "Расстояние между прямыми",
+                foo: "",
+                video: "https://drive.google.com/file/d/11OOEUKn-vqHumL-gDh2-vTmGZ4hhpJly/view?usp=drive_link",
                 tasks: [
                     <div answer="3">
                         <div>Прямая <TEX>{"a"}</TEX> проходит через 
@@ -457,6 +494,8 @@ export const DATA = {
             name: "Прямоугольные тела", 
             1: {
                 name: "Прямоугольный параллелепипед",
+                foo: "",
+                video: "https://drive.google.com/file/d/1aQMmFG9Jkw9kwm3v-qfs-9HKLUfbyWw2/view?usp=drive_link",
                 tasks: [
                     <div answer="(1/2; 1/2; 1/2)">
                         Найдите координаты центра единичного куба.
@@ -466,6 +505,8 @@ export const DATA = {
             },
             2: {
                 name: "Правильная четырёхугольная пирамида",
+                foo: "",
+                video: "https://drive.google.com/file/d/1WU8Sc8WE_GGJ9Gx58_vbzumM8L7NuLTo/view?usp=drive_link",
                 tasks: [
                     <div answer="(0; 0; 1/√2)">
                         Найдите координаты вершины <TEX>P</TEX> в правильной четырёхугольной
@@ -479,6 +520,8 @@ export const DATA = {
             name: "Треугольные тела",
             1: {
                 name: "Правильная треугольная призма",
+                foo: "",
+                video: "https://drive.google.com/file/d/1MbzWBTFUF8C4HWtlBC5FWpxflB8uOhm6/view?usp=drive_link",
                 tasks: [
                     <div answer="(0; √3/2; 1)">
                         Найдите координаты точки <TEX>C_1</TEX> в правильной треугольной
@@ -489,6 +532,8 @@ export const DATA = {
             },
             2: {
                 name: "Правильная треугольная пирамида",
+                foo: "",
+                video: "https://drive.google.com/file/d/1bMQoQ2tHLa9T4_W5ySyQYJBRCs-M-uFv/view?usp=drive_link",
                 tasks: [
                     <div answer="(0; √3/6; sqrt(2/3))">
                         Найдите координаты вершины <TEX>P</TEX> единичном правильном тетраэдре.
@@ -501,6 +546,8 @@ export const DATA = {
             name: "Шестиугольные тела",
             1: {
                 name: "Правильная шестиугольная призма",
+                foo: "",
+                video: "https://drive.google.com/file/d/1qfB521P4S3CiAaiFUGxGniphxtERrgob/view?usp=drive_link",
                 tasks: [
                     <div answer="(-1/2; √3/2; 1)">
                         Найдите координаты точки <TEX>C_1</TEX> в правильной шестиугольной
@@ -511,6 +558,8 @@ export const DATA = {
             },
             2: {
                 name: "Правильная шестиугольная пирамида",
+                foo: "",
+                video: "https://drive.google.com/file/d/1jR4qZYPRBlDjwv3VJRU-1C2TSKLxxieA/view?usp=drive_link",
                 tasks: [
                     <div answer="(0; 0; √3)">
                         Найдите координаты вершины <TEX>P</TEX> в правильной шестиугольной
@@ -524,6 +573,8 @@ export const DATA = {
             name: "Округлые тела",
             1: {
                 name: "Конус",
+                foo: "",
+                video: "https://drive.google.com/file/d/1nBtKTSQ8P6XMOxBEkURkxFtdsnlkgm85/view?usp=drive_link",
                 tasks: [
                     <div answer="(√3/2; 1/2; 0)">
                             В конусе с радиусом основния 1 найдите координаты
@@ -534,6 +585,8 @@ export const DATA = {
             },
             2: {
                 name: "Цилиндр",
+                foo: "",
+                video: "https://drive.google.com/file/d/1wm-JWhQMbjlxIhWmTLJu5mnxzDE4DzgV/view?usp=drive_link",
                 tasks: [
                     <div answer="1/2">
                         <div>
@@ -549,6 +602,8 @@ export const DATA = {
             },
             3: {
                 name: "Шар",
+                foo: "",
+                video: "https://drive.google.com/file/d/1RtUUcVqcgNwRHwZWDDLQlnXu7sHL2Hb_/view?usp=drive_link",
                 tasks: [
                     <div answer="1/2">
                         <div>
@@ -567,6 +622,8 @@ export const DATA = {
             name: "Задачи ЕГЭ",
             2: {
                 name: "Точки",
+                foo: "",
+                video: "https://drive.google.com/file/d/1qXsngiONX8SJQGJefGitgI68k6QbxUvx/view?usp=drive_link",
                 tasks: [
                     <div answer="4">
                          В правильной треугольной пирамиде боковое ребро равно 5,
@@ -619,6 +676,8 @@ export const DATA = {
             },
             1: {
                 name: "Углы и расстояния",
+                foo: "",
+                video: "https://drive.google.com/file/d/198taxJbA9MvB4xfrcxh4B6xxSb7o9B9h/view?usp=drive_link",
                 tasks: [
                     <div answer="5">
                                 В правильной шестиугольной призме
@@ -694,6 +753,8 @@ export const DATA = {
             },
             3: {
                 name: "Площадь сечения",
+                foo: "",
+                video: "https://drive.google.com/file/d/1liAlkKaa_vfFZtOju6jGcCN41VfsUEIg/view?usp=drive_link",
                 tasks: [
                     <div answer="5">
                         В прямоугольном параллелепипеде <TEX>ABCDA_1B_1C_1D_1</TEX> ребро <TEX>AB=2</TEX>,
@@ -745,6 +806,8 @@ export const DATA = {
             },
             4: {
                 name: "Объём пирамиды",
+                foo: "",
+                video: "https://drive.google.com/file/d/17U9k219PM62a6NFKJzex2Js_mzIi-AMJ/view?usp=drive_link",
                 tasks: [
                     <div answer="18">
                         Ребро куба <TEX>ABCDA_1B_1C_1D_1</TEX> равно 6.

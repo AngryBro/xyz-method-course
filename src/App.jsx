@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Lesson } from "./Lesson"
 import { Theme } from "./Theme"
 import { Route, Routes } from "./static-router"
@@ -190,7 +190,7 @@ export const App = () => {
                     done -= DATA[t][st][lesson].tasks.length - localData.task
                 }
             }
-            return {done, tasks, progress: unlocked ? Math.round(100*done / tasks): null}
+            return {done, tasks, progress: unlocked ? Math.round(10000*done / tasks) / 100: null}
         }
         const tasksTheme = (t) => {
             let done = 0
@@ -207,7 +207,7 @@ export const App = () => {
                     }
                 }
             }
-            return {done, tasks, progress: unlocked ? Math.round(100*done / tasks) : null}
+            return {done, tasks, progress: unlocked ? Math.round(10000*done / tasks) / 100 : null}
         }
         if(theme === undefined && subTheme === undefined) {
             let tasks = 0
@@ -224,7 +224,7 @@ export const App = () => {
                     }
                 }
             }
-            return {done, tasks, progress: unlocked ? Math.round(100*done / tasks) : null}
+            return {done, tasks, progress: unlocked ? Math.round(10000*done / tasks) / 100 : null}
         }
         if(subTheme === undefined) {
             return tasksTheme(theme)
@@ -232,6 +232,37 @@ export const App = () => {
         return tasksSubTheme(theme, subTheme)
     }
 
+
+    const [goto, setGoto] = useState("")
+
+
+    useEffect(() => {
+        const admin = (e) => {
+            const gotoString = "goto"
+            if(gotoString.includes(e.key)) {
+                if(goto.slice(-3) + e.key === gotoString) {
+                    const points = prompt().split(".").map(Number)
+                    const newData = {
+                        theme: points[0], 
+                        subTheme: points[1], 
+                        lesson: points[2], 
+                        task: points[3]
+                    }
+                    localStorage.setItem("data", JSON.stringify(newData))
+                    setData(newData)
+                    setGoto("")
+                }
+                else {
+                    setGoto(g => g.slice(-3) + e.key)
+                }
+            }
+            else {
+                setGoto("")
+            }
+        }
+        window.addEventListener("keydown", admin)
+        return () => window.removeEventListener("keydown", admin)
+    }, [goto])
 
     return <div className="container">
         <Routes>

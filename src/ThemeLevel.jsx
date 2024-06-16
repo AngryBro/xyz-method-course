@@ -13,7 +13,7 @@ export const ThemeLevel = ({children, progress, onClick}) => {
                 <Lock color="white" size={20} />
             </div>
             :
-            <div className="themelevel-progress">{progress}%</div>
+            <div className="themelevel-progress">{Math.floor(progress)}%</div>
         }
     </div>
 }

@@ -48,7 +48,7 @@ export const Main = ({tasksDone, lastLesson, reset}) => {
                 <ThemeLevel onClick={() => nav("/3")} progress={tasksDone(3).progress}>3. {DATA[3].name}</ThemeLevel>
                 <ThemeLevel onClick={() => nav("/4")} progress={tasksDone(4).progress}>4. {DATA[4].name}</ThemeLevel>
             </div>
-            <div onClick={() => progress === 100?reset():nav(`/lesson/${lastLesson}`)} className={`main-begin ${progress === 100 ? "__finished":""}`}>{progress === 0?"Начать":progress === 100?"Курс пройден!":`Продолжить (${progress}%)`}</div>
+            <div onClick={() => progress === 100?reset():nav(`/lesson/${lastLesson}`)} className={`main-begin ${progress === 100 ? "__finished":""}`}>{progress === 0?"Начать":progress === 100?"Курс пройден!":`Продолжить (${Math.floor(progress)}%)`}</div>
         </div>
     </div>
 }

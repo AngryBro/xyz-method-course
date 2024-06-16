@@ -88,7 +88,6 @@ export const Lesson = ({localData}) => {
             }
             ans = standardizeOperators(ans)
             correctAns = standardizeOperators(correctAns)
-            console.log(ans, correctAns)
             let evalAns, evalCorrect
             try {
                 // eslint-disable-next-line
@@ -196,8 +195,6 @@ export const Lesson = ({localData}) => {
     
     const oneTask = DATA[theme][subTheme][lesson].tasks.length === 1
 
-    const last = localData.nextLesson(theme, subTheme, lesson) === undefined
-
     const slides = () => {
         let count = 0
         const maxSubTheme = 20
@@ -211,14 +208,9 @@ export const Lesson = ({localData}) => {
     }
 
     const handleNext = () => {
-        if(last) {
-            nav("/")
-        }
-        else {
-            nav(`/lesson/${localData.nextLesson(theme, subTheme, lesson)}`)
-            if(!localData.finished) {
-                window.scrollTo({top:0, behavior:"smooth"})
-            }
+        nav(`/lesson/${localData.nextLesson(theme, subTheme, lesson)}`)
+        if(!localData.finished) {
+            window.scrollTo({top:0, behavior:"smooth"})
         }
     }
 
@@ -228,7 +220,7 @@ export const Lesson = ({localData}) => {
             <Router path={{theme, subTheme, lesson}} />
         </div>
         <div className="lesson-title">Лекция</div>
-        <iframe width={playerWidth} height={playerWidth * 720/1280} src={video} title="YouTube video player" allowFullScreen></iframe>
+        <iframe width={playerWidth} height={playerWidth * 720/1280} src={video.replace("view?usp=drive_link", "preview")} title="YouTube video player" allowFullScreen></iframe>
         <div className="lesson-title">Конспект</div>
         <div className="lesson-conspect">
             <iframe width={"100%"} height={playerWidth * 720/1280} src={slides()} title="Slides"></iframe>
@@ -248,7 +240,7 @@ export const Lesson = ({localData}) => {
         </div>
         <div className="lesson-next-container">
             <div className={`lesson-next ${nextHidden ? "__hidden":""}`} onClick={handleNext}>Далее</div>
-            <div className={`lesson-next ${!last ? "__hidden":""}`} onClick={handleNext}>На главную</div>
+            <div className={`lesson-next ${!localData.finished ? "__hidden":""}`} onClick={() => nav("/")}>На главную</div>
         </div>
         <div className="lesson-router-container">
             <Router path={{theme, subTheme, lesson}} />
