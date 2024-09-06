@@ -282,7 +282,7 @@ export const DATA = {
                             Найдите уравнение уравнение плоскости <TEX>\alpha</TEX>.
                         </div>
                     </div>,
-                    <div answer="3x - 9y - 8z - 22 = 0">
+                    <div answer="3x - 9y - 8z + 10 = 0">
                         <div>
                             Плоскость <TEX>\alpha</TEX> содержит точку <TEX>A(-7;-3;2)</TEX> и
                             параллельна векторам <TEX>{"\\vec{a}\\{-3;-9;9\\},~\\vec{b}\\{5;-1;3\\}"}</TEX>.
